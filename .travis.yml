@@ -1,6 +1,6 @@
 language: go
 install:
-  - go get github.com/InkProject/ink
+  - go get github.com/suveng/ink
   - ink build
 
 script:
