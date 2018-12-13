@@ -6,6 +6,7 @@ author: me
 
 ## suveng
 
-喜欢编程，乐于分享，拥抱开源
-[我的码云](https://gitee.com/suwenguang)
+你作出选择的那一日，在日记上，相当沉闷和平凡，当时还以为是生命中普通的一天。
+
+## [我的码云](https://gitee.com/suwenguang)
 [我的CSDN](https://blog.csdn.net/qq_37933685)
