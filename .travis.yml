@@ -4,13 +4,13 @@ install:
   - ink build
 
 script:
-  - cd ./docs
+  - cd ./blog/public/
   - git init
   - git config user.name "suveng"
   - git config user.email "suveng@163.com"
   - git add .
-  - git commit -m "update"
-  - git push --force --quiet "https://${GH_TOKEN}@{GH_REF}" master:master
+  - git commit -m "update blogs"
+  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
 
 branch:
   only:
