@@ -2,7 +2,7 @@ title: sublime text3 汉化
 date: 2018-12-14 12:00:00 +0800
 update: 2018-12-14 12:00:00 +0800
 author: suveng
-cover: images/wallhaven-714424.jpg
+cover: images/wallhaven-714657.jpg
 tags:
 
   - 效率
