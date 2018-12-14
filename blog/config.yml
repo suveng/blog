@@ -6,7 +6,7 @@ site:
     lang: zh
     theme: theme
     url: http://suwenguang.gitee.io/blog/
-    comment: username
+    # comment: username
     root: /blog
     link: "{category}/{year}/{month}/{day}/{title}.html"
 
