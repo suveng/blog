@@ -1,1 +1,9 @@
 User-agent: *
+
+Allow: /
+Allow: /misc/
+Disallow: /js/
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /vendors/
+Disallow: /fancybox/
