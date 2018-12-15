@@ -26,7 +26,7 @@
                     {{range .Articles}}
                     <li class="article">
                         <a class="title" href="{{$.Site.Root}}/{{.Link}}">{{if .Top}}<span class="top">[{{i18n "top"}}]</span>{{end}}{{.Title}}
-                        {{if .Cover}}<div class="cover" style="background-image:url({{.Cover}});"></div>{{end}}
+                        {{if .Cover}}<div class="cover" style="width:720px;height:405px;background-image:url({{.Cover}});"></div>{{end}}
                         </a>
                         {{if .Preview}}<section class="preview content">{{.Preview}}</section>{{end}}
                         <section class="info">
