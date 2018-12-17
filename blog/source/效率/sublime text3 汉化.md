@@ -26,3 +26,4 @@ tags:
 2. localization
 
    在界面上搜索localization，就会出现一个插件，自己看着选吧。安装完之后还有教你用这个插件的。
+
