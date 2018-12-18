@@ -8,11 +8,10 @@
         <title>{{.Title}}</title>
     </head>
     <body>
-        
+        <aside id="toc" class="toc"></aside>
         <article class="container">
             {{template "header" .}}
             <article class="main article">
-                <div id="toc" class="toc" data-toc="h2,h3,h4"></div>
                 <h1 class="title">{{.Title}}</h1>
                 <section class="info">
                     {{if .Author.Avatar}}<span class="avatar" style="background-image: url({{.Author.Avatar}});"></span>{{end}}
@@ -25,7 +24,7 @@
                     <span class="tags">{{range .Tags}}<a class="tag" href="{{$.Site.Root}}/tag/{{.}}/index.html">{{.}}</a>{{end}}</span>
                     <span id="busuanzi_container_page_pv" class="date">被围观了<span id="busuanzi_value_page_pv"></span>次</span>
                 </section>
-                <article class="content">{{.Content}}</article>
+                <article id='content' class="content">{{.Content}}</article>
                 <section class="author">
                     <a class="name" href="{{.Site.Root}}/about.{{.Author.Id}}.html">
                         {{if .Author.Avatar}}<div class="avatar" style="background-image: url({{.Author.Avatar}});"></div>{{end}}
@@ -54,8 +53,11 @@
         <script src="{{.Site.Root}}/bundle/index.js"></script>
     </body>
     <script type="text/javascript">
-        document.getElementById('toc').toc({
-            'selectors': 'h2,h3,h4', //elements to use as headings
+        new Toc('content',{
+            'level': 3,
+            'top': 200,
+            'class': 'toc',
+            'targetId': 'toc'
         });
     </script>
 </html>
