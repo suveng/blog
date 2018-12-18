@@ -11,8 +11,8 @@
         
         <article class="container">
             {{template "header" .}}
-            <div id="toc" class="toc" data-toc="h1, h2, h3,h4"></div>
             <article class="main article">
+                <div id="toc" class="toc" data-toc="h2,h3,h4"></div>
                 <h1 class="title">{{.Title}}</h1>
                 <section class="info">
                     {{if .Author.Avatar}}<span class="avatar" style="background-image: url({{.Author.Avatar}});"></span>{{end}}
@@ -54,7 +54,9 @@
         <script src="{{.Site.Root}}/bundle/index.js"></script>
     </body>
     <script type="text/javascript">
-        
+        document.getElementById('toc').toc({
+            'selectors': 'h2,h3,h4', //elements to use as headings
+        });
     </script>
 </html>
 
