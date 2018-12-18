@@ -2,7 +2,7 @@ title: bootstrap-datatables使用教程
 date: 2018-12-18 12:00:00 +0800
 update: 2018-12-18 12:00:00 +0800
 author: me
-cover: images/wallhaven-718319.jpg
+cover: http://pjxmrlmux.bkt.clouddn.com/wallhaven-718319.jpg
 tags:
 
   - 前端
