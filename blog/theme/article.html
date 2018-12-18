@@ -8,9 +8,10 @@
         <title>{{.Title}}</title>
     </head>
     <body>
-        <div id="toc" class="toc" data-toc="h1, h2, h3,h4,h5,h6,h7"></div>
+        
         <article class="container">
             {{template "header" .}}
+            <div id="toc" class="toc" data-toc="h1, h2, h3,h4"></div>
             <article class="main article">
                 <h1 class="title">{{.Title}}</h1>
                 <section class="info">
