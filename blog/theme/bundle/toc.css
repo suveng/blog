@@ -1,8 +1,8 @@
 .toc {
-  float: right;
-  margin-left: 40px;
-  padding: 10px 20px;
-  background: #f1f1f1;
-  border-radius: 10px;
-  box-shadow: 0 0 3px #bbb;
+  	float: right;
+    margin-top: 10%;
+    margin-left: 0;
+    padding: 0;
+  	background: #f1f1f1;
+  	border-radius: 10px;
 }
