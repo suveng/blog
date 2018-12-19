@@ -1,7 +1,7 @@
 site:
     title: suveng's blog
     subtitle: 你作出选择的那一日，在日记上，相当沉闷和平凡，当时还以为是生命中普通的一天。
-    logo: images/avatar.jpg
+    logo: -images/avatar.jpg
     limit: 8
     lang: zh
     theme: theme
@@ -14,7 +14,7 @@ authors:
     me:
         name: suveng
         intro: Java服务端开发者，golang爱好者
-        avatar: images/avatar.jpg
+        avatar: -images/avatar.jpg
 build:
     # output: "public"
     port: 8000
