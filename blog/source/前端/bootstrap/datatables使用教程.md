@@ -183,7 +183,7 @@ $("#t1").dataTable({});
 
 ### 效果截图
 
-![datatables-简单使用效果截图](http://piezqhqs4.bkt.clouddn.com/datatables%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8.png-common)
+![datatables-简单使用效果截图](-/images/datatables简单使用.png)
 
 ## ajax异步带参数获取数据源，结合Java服务端模式
 
