@@ -2,7 +2,7 @@ title: bootstrap-datatables使用教程
 date: 2018-12-18 12:00:00 +0800
 update: 2018-12-18 12:00:00 +0800
 author: me
-cover: http://pjxmrlmux.bkt.clouddn.com/wallhaven-715203.jpg
+cover: -images/wallhaven-715203.jpg
 tags:
 
   - 前端
@@ -10,7 +10,7 @@ preview:  Datatables是一款jquery表格插件。它是一个高度灵活的工
 
 ---
 
-[TOC]
+
 
 #  bootstrap-datatables使用教程
 

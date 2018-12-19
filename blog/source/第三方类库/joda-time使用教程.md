@@ -2,7 +2,7 @@ title: joda-time使用教程
 date: 2018-12-12 12:00:00 +0800
 update: 2018-12-12 12:00:00 +0800
 author: me
-cover: http://pjxmrlmux.bkt.clouddn.com/wallhaven-714079.jpg
+cover: -images/wallhaven-714079.jpg
 tags:
 
   - 第三方类库
@@ -10,7 +10,7 @@ preview:  Joda项目为Java平台提供了高质量的低级库。Joda-Time为Ja
 
 ---
 
-[TOC]
+
 
 #  joda-time使用教程
 
