@@ -1,8 +1,13 @@
 .toc {
-  	float: right;
-    margin-top: 10%;
-    margin-left: 0;
-    padding: 0;
-  	background: #f1f1f1;
-  	border-radius: 10px;
+    width: 200px;
+    height: auto;
+    z-index: 98;
+    background-color: rgba(255,255,255,0);
+    transform: translateX(0);
+    right: calc((100% - 950px - 250px) / 2);
+    position: fixed !important;
+    top:480px;
+    position: absolute;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }

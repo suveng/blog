@@ -8,6 +8,9 @@ tags:
   - 效率
 
 ---
+
+[TOC]
+
 # sublime text3 汉化
 
 原装的sublime都是英文的，如果不是，那么你的可能是破解版

@@ -8,9 +8,9 @@
         <title>{{.Title}}</title>
     </head>
     <body>
-        <aside id="toc" class="toc"></aside>
         <article class="container">
             {{template "header" .}}
+            <div class="toc"></div>
             <article class="main article">
                 <h1 class="title">{{.Title}}</h1>
                 <section class="info">
@@ -53,12 +53,70 @@
         <script src="{{.Site.Root}}/bundle/index.js"></script>
     </body>
     <script type="text/javascript">
-        new Toc('content',{
-            'level': 2,
-            'top': 200,
-            'class': 'toc',
-            'targetId': 'toc'
+    tocbot.init({
+        // Where to render the table of contents.
+        tocSelector: '.toc', // 放置目录的容器
+        // Where to grab the headings to build the table of contents.
+        contentSelector: '.content', // 正文内容所在
+        // Which headings to grab inside of the contentSelector element.
+        headingSelector: 'h1, h2', // 需要索引的标题级别
+        positionFixedSelector: ".toc", //目录位置固定
+        scrollEndCallback: function (e) { //回调函数
+            window.scrollTo(window.scrollX, window.scrollY - 20)
+            //修正滚动后页面的位置，80 是自己顶部栏的高度
+        },
+});
+
+
+function mashiroToc(mashiro) {
+    // 滚动及悬浮
+    $(document).ready(function() {
+        if ($("div").hasClass("toc")) {
+            var $elm = $('.toc');
+            var iniTop = 500; 
+            var finTop = 100; 
+            var hasScrolled = $('.header-wrap').offset().top;
+            if (hasScrolled > iniTop) {
+                $elm.css({
+                    'top': finTop
+                });
+            }
+            $(window).scroll(function() {
+                var p = $(window).scrollTop();
+                if (p > iniTop - finTop) {
+                    $elm.css({
+                        'top': finTop
+                    });
+                } else {
+                    $elm.css({
+                        'top': iniTop - p
+                    });
+                }
+            });
+        }
+    });
+    // 初始化
+    if (mashiro) {
+        var id = 1;
+        $(".content").children("h1,h2,h3").each(function() {
+            //var hyphenated = $(this).text().replace(/\s/g, '-');
+            var hyphenated = "mashiro-" + id;
+            $(this).attr('id', hyphenated);
+            id++;
         });
+        // 初始化 tocbot.js
+        tocbot.init({
+            tocSelector: '.toc',
+            contentSelector: '.entry-content',
+            headingSelector: 'h1, h2, h3',
+            positionFixedSelector: ".toc",
+            scrollEndCallback: function (e) {
+                window.scrollTo(window.scrollX, window.scrollY - 80);
+            },
+        });
+    }
+}
+mashiroToc(true);
     </script>
 </html>
 
