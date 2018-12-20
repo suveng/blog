@@ -2,7 +2,7 @@ title: MyBatis 流式读取MySQL大量数据
 date: 2018-12-19 12:00:00 +0800
 update: 2018-12-19 12:00:00 +0800
 author: me
-cover: images/wallhaven-705949.jpg
+cover: https://ws1.sinaimg.cn/large/006jIRTegy1fyd7n95kxsj31hc0u0nb7.jpg
 tags:
 
   - MyBatis

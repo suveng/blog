@@ -2,7 +2,7 @@ title: joda-time使用教程
 date: 2018-12-12 12:00:00 +0800
 update: 2018-12-12 12:00:00 +0800
 author: me
-cover: images/wallhaven-714079.jpg
+cover: https://ws1.sinaimg.cn/large/006jIRTegy1fyd7oyvhzuj31z4140tm1.jpg
 tags:
 
   - 第三方类库

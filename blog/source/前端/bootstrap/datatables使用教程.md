@@ -2,7 +2,7 @@
 date: 2018-12-18 12:00:00 +0800
 update: 2018-12-20 12:00:00 +0800
 author: me
-cover: images/wallhaven-715203.jpg
+cover: https://ws1.sinaimg.cn/large/006jIRTegy1fyd7q1vnfgj31z4140k2q.jpg
 tags:
 
   - 前端
