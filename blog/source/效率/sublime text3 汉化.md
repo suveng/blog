@@ -9,7 +9,7 @@ tags:
 
 ---
 
-
+![封面图](https://ws1.sinaimg.cn/large/006jIRTegy1fyd7q1xo61j31kw0w0dol.jpg)
 
 # sublime text3 汉化
 

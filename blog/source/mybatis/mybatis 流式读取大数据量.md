@@ -10,6 +10,8 @@ preview:  JDBC三种读取方式：1.一次全部（默认）：一次获取全�
 
 ---
 
+![封面图](https://ws1.sinaimg.cn/large/006jIRTegy1fyd7n95kxsj31hc0u0nb7.jpg)
+
 #  MyBatis 流式读取MySQL大量数据
 
 ## 背景：

@@ -10,7 +10,7 @@ preview:  Datatables是一款jquery表格插件。它是一个高度灵活的工
 
 ---
 
-
+![封面图](https://ws1.sinaimg.cn/large/006jIRTegy1fyd7q1vnfgj31z4140k2q.jpg)
 
 #  bootstrap-datatables使用教程
 
