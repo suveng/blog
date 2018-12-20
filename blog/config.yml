@@ -2,7 +2,7 @@ site:
     title: suveng's blog
     subtitle: 你作出选择的那一日，在日记上，相当沉闷和平凡，当时还以为是生命中普通的一天。
     logo: "-/images/avatar.jpg"
-    limit: 8
+    limit: 3
     lang: zh
     theme: theme
     url: http://suwenguang.gitee.io/blog/
