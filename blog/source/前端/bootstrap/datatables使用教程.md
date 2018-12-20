@@ -185,7 +185,7 @@ $("#t1").dataTable({});
 
 ### 效果截图
 
-![datatables-简单使用效果截图](https://img-blog.csdnimg.cn/20181220101437874.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3OTMzNjg1,size_16,color_FFFFFF,t_70)
+![datatables-简单使用效果截图](https://ws1.sinaimg.cn/large/006jIRTegy1fyd7q1lo46j31hc07dmx6.jpg)
 
 可以看到，这些默认都是英文的，那怎么办呢？其实我们可以自己定制这个语言选项。
 
@@ -225,7 +225,7 @@ $("#t1").dataTable({
 
 ### 效果截图
 
-![datatables的定制language效果图](https://img-blog.csdnimg.cn/20181220101522502.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3OTMzNjg1,size_16,color_FFFFFF,t_70)
+![datatables的定制language效果图](https://ws1.sinaimg.cn/large/006jIRTegy1fyd7q1log4j31hc06o0sq.jpg)
 
 可以看到，datatables是提供接口让我们自定义的，当然，相对应的官网也会提供接口文档。具体可以看[这里](http://datatables.club/reference/option/)
 
@@ -551,7 +551,7 @@ SET FOREIGN_KEY_CHECKS = 1;
 
 #### 效果截图
 
-![ajax异步带参数获取数据](https://img-blog.csdnimg.cn/20181220101543834.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3OTMzNjg1,size_16,color_FFFFFF,t_70)
+![ajax异步带参数获取数据](https://ws1.sinaimg.cn/large/006jIRTegy1fyd7zslhudj31hc0dzdga.jpg)
 
 
 
