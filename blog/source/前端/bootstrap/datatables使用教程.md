@@ -1,6 +1,6 @@
 title: bootstrap-datatables使用教程
 date: 2018-12-18 12:00:00 +0800
-update: 2018-12-18 12:00:00 +0800
+update: 2018-12-20 12:00:00 +0800
 author: me
 cover: images/wallhaven-715203.jpg
 tags:
@@ -29,6 +29,8 @@ Datatables是一款jquery表格插件。它是一个高度灵活的工具，可�
 * 更多特性请到官网查看
 
 ## 安装配置
+
+> 本文代码仓库：[https://gitee.com/suwenguang/demo/tree/datatables使用教程](https://gitee.com/suwenguang/demo/tree/datatables%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B)
 
 ### 步骤
 
@@ -185,6 +187,96 @@ $("#t1").dataTable({});
 
 ![datatables-简单使用效果截图](-/images/datatables简单使用.png)
 
+可以看到，这些默认都是英文的，那怎么办呢？其实我们可以自己定制这个语言选项。
+
+## 设置language 选项
+
+下面给出详细点的解释，这些是通常能用到的。但是很多时候，项目开发是不需要这么多的。
+
+### 关键代码
+
+> 对应仓库的`datatables使用教程` 分支的 `language选项详解`
+
+```js
+$("#t1").dataTable({
+  language: {
+    "decimal": "",//小数的小数位符号  比如“，”作为数字的小数位符号
+    "emptyTable": "没有数据哟~~",//没有数据时要显示的字符串
+    "info": "当前 _START_ 条到 _END_ 条 共 _TOTAL_ 条",//左下角的信息，变量可以自定义，到官网详细查看
+    "infoEmpty": "无记录",//当没有数据时，左下角的信息
+    "infoFiltered": "(从 _MAX_ 条记录过滤)",//当表格过滤的时候，将此字符串附加到主要信息
+    "infoPostFix": "",//在摘要信息后继续追加的字符串
+    "thousands": ",",//千分位分隔符
+    "lengthMenu": "每页 _MENU_ 条记录",//用来描述分页长度选项的字符串
+    "loadingRecords": "加载中...",//用来描述数据在加载中等待的提示字符串 - 当异步读取数据的时候显示
+    "processing": "处理中...",//用来描述加载进度的字符串
+    "search": "搜索",//用来描述搜索输入框的字符串
+    "zeroRecords": "没有找到",//当没有搜索到结果时，显示
+    "paginate": {
+      "first": "首页",
+      "previous": "上一页",
+      "next": "下一页",
+      "last": "尾页"
+    }
+  }
+
+});
+```
+
+### 效果截图
+
+![datatables的定制language效果图](-/images/datatables的定制language.png)
+
+可以看到，datatables是提供接口让我们自定义的，当然，相对应的官网也会提供接口文档。具体可以看[这里](http://datatables.club/reference/option/)
+
+## 设置开发常用选项
+
+那么我们开发也只是用到其中的一些。比较常用的，适应大部分普通后台管理的需求。
+
+### 示例代码
+
+> 具体查看代码仓库：`datatables使用教程`分支的 `常用选项`
+
+index.js
+
+```js
+$("#t1").dataTable({
+  language: {
+    "decimal": "",//小数的小数位符号  比如“，”作为数字的小数位符号
+    "emptyTable": "没有数据哟~~",//没有数据时要显示的字符串
+    "info": "当前 _START_ 条到 _END_ 条 共 _TOTAL_ 条",//左下角的信息，变量可以自定义，到官网详细查看
+    "infoEmpty": "无记录",//当没有数据时，左下角的信息
+    "infoFiltered": "(从 _MAX_ 条记录过滤)",//当表格过滤的时候，将此字符串附加到主要信息
+    "infoPostFix": "",//在摘要信息后继续追加的字符串
+    "thousands": ",",//千分位分隔符
+    "lengthMenu": "每页 _MENU_ 条记录",//用来描述分页长度选项的字符串
+    "loadingRecords": "加载中...",//用来描述数据在加载中等待的提示字符串 - 当异步读取数据的时候显示
+    "processing": "处理中...",//用来描述加载进度的字符串
+    "search": "搜索",//用来描述搜索输入框的字符串
+    "zeroRecords": "没有找到",//当没有搜索到结果时，显示
+    "paginate": {
+      "first": "首页",
+      "previous": "上一页",
+      "next": "下一页",
+      "last": "尾页"
+    }
+  },
+  processing: true,//是否显示处理状态(排序的时候，数据很多耗费时间长的话，也会显示这个)
+  lengthChange: true,//是否允许用户改变表格每页显示的记录数
+  orderMulti: true,  //启用多列排序
+  ordering: true,//使用排序
+  bStateSave: true,//记录cookie
+  paging: true,//是否分页
+  pagingType: "full_numbers",//除首页、上一页、下一页、末页四个按钮还有页数按钮
+  searching: false,//是否开始本地搜索
+  stateSave: false,//刷新时是否保存状态
+  autoWidth: true,//自动计算宽度
+  deferRender: true,//延迟渲染
+});
+```
+
+扯了那么多，只是定义一个大概雏形，接下来才是重头戏
+
 ## ajax异步带参数获取数据源，结合Java服务端模式
 
 > 服务端采用springboot 的 ssm框架 + freemarkder视图（新手提示：类似jsp的东东）+pagehelper分页
@@ -193,9 +285,9 @@ $("#t1").dataTable({});
 
 #### 前端的步骤
 
-* 开启datatables的一些参数
-* 配置ajax源
-* 渲染
+* 开启datatables的一些参数，serverSide: true
+* 配置ajax源，即后端接口url
+* 渲染，调用函数 `datatables.ajax.reload()`
 
 #### 后端接口的步骤
 
@@ -211,25 +303,255 @@ $("#t1").dataTable({});
 
 ##### 前端
 
-html
+freemarker 
 
 ```html
-
+<html>
+<#include "common/head.ftl">
+<body>
+<table id="t1">
+  <thead>
+  <tr>
+    <th>编号</th>
+    <th>姓名</th>
+    <th>性别</th>
+    <th>年龄</th>
+    <th>生日</th>
+  </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+</body>
+</html>
+<#include "common/footer.ftl">
+<script src="/js/index.js"></script>
 ```
+
+> 这里我使用的静态模板引擎 freemarker
+
+html只要表头，其他样式都不要了，懒！
 
 js
 
 ```js
+$("#t1").dataTable({
+  language: {
+    "decimal": "",//小数的小数位符号  比如“，”作为数字的小数位符号
+    "emptyTable": "没有数据哟~~",//没有数据时要显示的字符串
+    "info": "当前 _START_ 条到 _END_ 条 共 _TOTAL_ 条",//左下角的信息，变量可以自定义，到官网详细查看
+    "infoEmpty": "无记录",//当没有数据时，左下角的信息
+    "infoFiltered": "(从 _MAX_ 条记录过滤)",//当表格过滤的时候，将此字符串附加到主要信息
+    "infoPostFix": "",//在摘要信息后继续追加的字符串
+    "thousands": ",",//千分位分隔符
+    "lengthMenu": "每页 _MENU_ 条记录",//用来描述分页长度选项的字符串
+    "loadingRecords": "加载中...",//用来描述数据在加载中等待的提示字符串 - 当异步读取数据的时候显示
+    "processing": "处理中...",//用来描述加载进度的字符串
+    "search": "搜索",//用来描述搜索输入框的字符串
+    "zeroRecords": "没有找到",//当没有搜索到结果时，显示
+    "paginate": {
+      "first": "首页",
+      "previous": "上一页",
+      "next": "下一页",
+      "last": "尾页"
+    }
+  },
+  processing: true,//是否显示处理状态(排序的时候，数据很多耗费时间长的话，也会显示这个)
+  lengthChange: true,//是否允许用户改变表格每页显示的记录数
+  orderMulti: true,  //启用多列排序
+  ordering: true,//使用排序
+  bStateSave: true,//记录cookie
+  paging: true,//是否分页
+  pagingType: "full_numbers",//除首页、上一·页、下一页、末页四个按钮还有页数按钮
+  searching: false,//是否开始本地搜索
+  stateSave: false,//刷新时是否保存状态
+  autoWidth: true,//自动计算宽度
+  deferRender: true,//延迟渲染
+  serverSide: true,//开启服务器模式
+  //获取数据
+  ajax: {
+    "url": ctx + "/getList",
+    "type": 'POST',
+    //绑定额外参数
+    "data": function (d) {
+      return $.extend({}, d,
+          {
+            "id":$("#user_id").val()
+          });
+    }
+  },
+  //设置数据
+  columns: [
+    {data: "userId", defaltContent:"空"},
+    {data: "name", defaultContent:"空"},
+    {data: "sex", defaultContent: "未知性别"},
+    {data: "age", defaultContent: 0},
+    {data: "birth", defaultContent: "未知",render:function (date) { return moment(date).format("yyyy-mm-dd hh:mm:ss") }}
+  ]
 
+});
 ```
+
+主要：开启服务器模式；开启ajax获取数据；设置数据；
+
+> 这里还用到了render函数，做数据处理，如果会js的同学应该一下就懂了，不懂就把它当成回调函数。
+
+
 
 #### springboot服务端
 
+##### controller层
+
+DatatableController.java
+
 ```java
+@Controller
+public class DatatablesController {
+    private final UserService userService;
+
+    @Autowired
+    public DatatablesController(UserService userService) {
+        this.userService = userService;
+    }
+
+    /**
+     * 返回视图
+     * @return view
+     */
+    @RequestMapping("/index")
+    public String index(){
+        return "index";
+    }
+
+    /**
+     * 获取全部数据
+     * @return list
+     */
+    @RequestMapping("/getList")
+    @ResponseBody
+    public DataTable getList(User user,Order order, Integer start,Integer length, Integer draw){
+        PageInfo pageInfo = userService.selectByPageNumSize(user, start, length);
+        List<User> users =  pageInfo.getList();
+        long total = pageInfo.getTotal();
+        return DataTableBulid.build(draw, (int) total,users);
+    }
+
+    /**
+     * 手动插入1000
+     * @return string
+     */
+    @RequestMapping("/insert")
+    @ResponseBody
+    public String insert(){
+        for (int i = 0; i < 1000; i++) {
+            String s = RandomStringUtils.randomAscii(8);
+                    User user = new User();
+                    user.setName(s);
+                    user.setAge(RandomUtils.nextInt(1, 1000));
+                    user.setBirth(new Date());
+                    user.setSex(RandomStringUtils.randomAscii(1));
+                    userService.save(user);
+        }
+        return "success";
+    }
+}
 
 ```
 
+> 当你开启服务器模式serverside，datatables会主动提交一些参数过来，具体查看官网http://datatables.club/manual/server-side.html，下面贴出一些官网的内容.
+
+> 返回给datatables的数据也有点讲究，这里我是按照官网的说明，封装一个datatable的类。详细说明看官网http://datatables.club/manual/server-side.html
+
+DT自动请求的参数(Sent parameters)
+当开启了 服务器模式时，DataTables 会发送如下参数到服务器
+
+| 名称     | 类型                                                        | 描述                                                         |
+| -------- | ----------------------------------------------------------- | ------------------------------------------------------------ |
+| `draw`   | [`integerJS`](http://datatables.net/reference/type/integer) | 绘制计数器。这个是用来确保Ajax从服务器返回的是对应的（Ajax是异步的，因此返回的顺序是不确定的）。 要求在服务器接收到此参数后再返回（具体看 [下面](http://datatables.club/manual/server-side.html#returndata)） |
+| `start`  | [`integerJS`](http://datatables.net/reference/type/integer) | 第一条数据的起始位置，比如0代表第一条数据                    |
+| `length` | [`integerJS`](http://datatables.net/reference/type/integer) | 告诉服务器每页显示的条数，这个数字会等于返回的 `data`集合的记录数，可能会大于因为服务器可能没有那么多数据。这个也可能是-1，代表需要返回全部数据(尽管这个和服务器处理的理念有点违背) |
+
+服务器需要返回的数据(Returned data)
+一旦 DataTables 发送了请求，上面的参数就会传送给服务器，那么你需要接受到这些参数并做相应的逻辑处理然后按照下面的格式讲组装好的JSON数据返回 （不是每个参数都需要接受处理，根据自己的业务需要）
+
+| 名称              | 类型                                                        | 描述                                                         |
+| ----------------- | ----------------------------------------------------------- | ------------------------------------------------------------ |
+| `draw`            | [`integerJS`](http://datatables.net/reference/type/integer) | **必要**。上面提到了，Datatables发送的draw是多少那么服务器就返回多少。 这里注意，作者出于安全的考虑，强烈要求把这个转换为整形，即数字后再返回，而不是纯粹的接受然后返回，这是 为了防止跨站脚本（XSS）攻击。 |
+| `recordsTotal`    | [`integerJS`](http://datatables.net/reference/type/integer) | **必要**。即没有过滤的记录数（数据库里总共记录数）           |
+| `recordsFiltered` | [`integerJS`](http://datatables.net/reference/type/integer) | **必要**。过滤后的记录数（如果有接收到前台的过滤条件，则返回的是过滤后的记录数） |
+| `data`            | [`arrayType`](https://datatables.net/reference/type/array)  | **必要**。表中中需要显示的数据。这是一个对象数组，也可以只是数组，区别在于 纯数组前台就不需要用 `columns`绑定数据，会自动按照顺序去显示 ，而对象数组则需要使用 `columns`绑定数据才能正常显示。 注意这个 `data`的名称可以由 [`ajaxOption`](http://datatables.club/reference/option/ajax.html)[`ajax不定时一讲` ](http://datatables.club/manual/daily/2016/04/18/option-ajax.html)的 [`ajax.dataSrcOption` ](http://datatables.club/reference/option/ajax.dataSrc.html)[`ajax.dataSrc 1不定时一讲`](http://datatables.club/manual/daily/2016/04/19/option-ajax-dataSrc1.html)[`ajax.dataSrc 2不定时一讲` ](http://datatables.club/manual/daily/2016/04/20/option-ajax-dataSrc2.html)控制 |
+| `error`           | [`stringJS`](http://datatables.net/reference/type/string)   | **可选**。你可以定义一个错误来描述服务器出了问题后的友好提示 |
+
+##### service层
+
+UserServiceImpl.java
+
+> 这里我使用的tk.mybatis做通用service和通用mapper。
+>
+> 把datatables传过来的参数start 和 length 作为pagehelper的offset 和 pageSize.
+
+```java
+@Service
+public class UserServiceImpl extends BaseService<User> implements UserService {
+
+  @Resource
+  UserMapper userMapper;
+  @Override
+  public PageInfo selectByPageNumSize(User user, int pageNum, int pageSize) {
+    PageHelper.offsetPage(pageNum, pageSize);
+    List<User> users = userMapper.selectByPageNumSize(user);
+    return new PageInfo<>(users);
+  }
+}
+```
+
+##### dao层
+
+UserMapper.java
+
+```java
+public interface UserMapper extends MyMapper<User> {
+
+  /**
+   * @param user
+   * @return
+   */
+  List<User> selectByPageNumSize(
+      @Param("user") User user);
+}
+```
+
+UserMapper.xml
+
+```xml
+<select id="selectByPageNumSize" resultType="my.suveng.demo.model.domain.User">
+select * from sys_user
+</select>
+```
+
+##### 数据库文件
+
+```mssql
+DROP TABLE IF EXISTS `sys_user`;
+CREATE TABLE `sys_user`  (
+  `user_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `sex` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `age` int(11) NULL DEFAULT NULL,
+  `birth` datetime(0) NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP(0),
+  PRIMARY KEY (`user_id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 11001 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+
+SET FOREIGN_KEY_CHECKS = 1;
+```
+
+> 测试数据的话，我已经写了一个接口放在controller那里了。
+>
+> 具体查看代码仓库：`datatables使用教程`分支的 `ajax异步带参数获取数据源 `
+
 #### 效果截图
+
+![ajax异步带参数获取数据](-/images/ajax异步带参数获取数据.png)
 
 
 
