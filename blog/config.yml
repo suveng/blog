@@ -8,7 +8,7 @@ site:
     url: http://suwenguang.gitee.io/blog/
     # comment: username
     root: /blog
-    link: "{category}/{year}{month}{day}.html"
+    link: "{category}/{year}{month}{day}{hour}{minute}{second}.html"
 
 authors:
     me:
