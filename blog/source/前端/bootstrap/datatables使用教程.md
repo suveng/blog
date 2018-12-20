@@ -1,6 +1,6 @@
 ﻿title: bootstrap-datatables使用教程
 date: 2018-12-18 12:00:00 +0800
-update: 2018-12-20 12:00:00 +0800
+update: 2018-12-20 15:00:00 +0800
 author: me
 cover: https://ws1.sinaimg.cn/large/006jIRTegy1fyd7q1vnfgj31z4140k2q.jpg
 tags:
@@ -283,13 +283,13 @@ $("#t1").dataTable({
 
 #### 步骤
 
-#### 前端的步骤
+##### 前端的步骤
 
 * 开启datatables的一些参数，serverSide: true
 * 配置ajax源，即后端接口url
 * 渲染，调用函数 `datatables.ajax.reload()`
 
-#### 后端接口的步骤
+##### 后端接口的步骤
 
 * 编写接口
 * 编写mapper
@@ -553,7 +553,183 @@ SET FOREIGN_KEY_CHECKS = 1;
 
 ![ajax异步带参数获取数据](https://ws1.sinaimg.cn/large/006jIRTegy1fyd7zslhudj31hc0dzdga.jpg)
 
+分页和数据展示都做好了，那么现在就来做一个搜索条件吧，项目来讲，搜索这个功能是必不可少的。
 
+## 搜索条件，整合服务端，利用mybatis动态sql
+
+### 步骤
+
+#### 前端步骤：
+
+* 添加搜索条件输入框和搜索框
+* 获取搜索条件输入
+* 添加datatables的额外参数，传给服务端接口
+
+#### 服务端步骤：
+
+* 编写controller接口，接收搜索参数，处理完，返回datatables对象（自己封装的）
+* 编写service业务逻辑，处理数据，返回给controller
+* 编写dao，自定义sql 筛选数据，返回给service
+
+### 示例代码
+
+#### 前端
+
+index.ftl
+
+添加搜索条件输入框和搜索框
+
+```html
+<html>
+<#include "common/head.ftl">
+<body>
+<form>
+  <input type="text" id="sch_userId" placeholder="请输入userID...">
+  <input type="button" id="doQuery" value="搜索">
+  <input type="reset" value="重置">
+</form>
+<table id="t1">
+  <thead>
+  <tr>
+    <th>编号</th>
+    <th>姓名</th>
+    <th>性别</th>
+    <th>年龄</th>
+    <th>生日</th>
+  </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+</body>
+</html>
+<#include "common/footer.ftl">
+<script src="/js/index.js"></script>
+```
+
+添加datatables的额外参数，传给服务端接口
+
+index.js
+
+```js
+$(function () {
+  $("#doQuery").click(doQuery);
+});
+var doQuery=function (){
+  datatables.api().ajax.reload();
+};
+
+var datatables = $("#t1").dataTable({
+  language: {
+    "decimal": "",//小数的小数位符号  比如“，”作为数字的小数位符号
+    "emptyTable": "没有数据哟~~",//没有数据时要显示的字符串
+    "info": "当前 _START_ 条到 _END_ 条 共 _TOTAL_ 条",//左下角的信息，变量可以自定义，到官网详细查看
+    "infoEmpty": "无记录",//当没有数据时，左下角的信息
+    "infoFiltered": "(从 _MAX_ 条记录过滤)",//当表格过滤的时候，将此字符串附加到主要信息
+    "infoPostFix": "",//在摘要信息后继续追加的字符串
+    "thousands": ",",//千分位分隔符
+    "lengthMenu": "每页 _MENU_ 条记录",//用来描述分页长度选项的字符串
+    "loadingRecords": "加载中...",//用来描述数据在加载中等待的提示字符串 - 当异步读取数据的时候显示
+    "processing": "处理中...",//用来描述加载进度的字符串
+    "search": "搜索",//用来描述搜索输入框的字符串
+    "zeroRecords": "没有找到",//当没有搜索到结果时，显示
+    "paginate": {
+      "first": "首页",
+      "previous": "上一页",
+      "next": "下一页",
+      "last": "尾页"
+    }
+  },
+  processing: true,//是否显示处理状态(排序的时候，数据很多耗费时间长的话，也会显示这个)
+  lengthChange: true,//是否允许用户改变表格每页显示的记录数
+  orderMulti: true,  //启用多列排序
+  ordering: true,//使用排序
+  bStateSave: true,//记录cookie
+  paging: true,//是否分页
+  pagingType: "full_numbers",//除首页、上一·页、下一页、末页四个按钮还有页数按钮
+  searching: false,//是否开始本地搜索
+  stateSave: false,//刷新时是否保存状态
+  autoWidth: true,//自动计算宽度
+  deferRender: true,//延迟渲染
+  serverSide: true,//开启服务器模式
+  //获取数据
+  ajax: {
+    "url": ctx + "/getList",
+    "type": 'POST',
+    //绑定额外参数
+    "data": function (d) {
+      return $.extend({}, d,
+          {
+            "userId":$("#sch_userId").val()
+          });
+    }
+  },
+  //设置数据
+  columns: [
+    {data: "userId", defaltContent:"空"},
+    {data: "name", defaultContent:"空"},
+    {data: "sex", defaultContent: "未知性别"},
+    {data: "age", defaultContent: 0},
+    {data: "birth", defaultContent: "未知",render:function (date) { return moment(date).format("yyyy-mm-dd hh:mm:ss") }}
+  ]
+
+});
+```
+
+#### 服务端
+
+controller层接收参数
+
+> 还是原来的代码，只不过这次前端是会有值传过来了。这个值我一般会封装到vo对象里面，这里我封装到user里面
+
+```java
+@RequestMapping("/getList")
+  @ResponseBody
+  public DataTable getList(User user, Order order, Integer start, Integer length, Integer draw) {
+    PageInfo pageInfo = userService.selectByPageNumSize(user, start, length);
+    List<User> users = pageInfo.getList();
+    long total = pageInfo.getTotal();
+    return DataTableBulid.build(draw, (int) total, users);
+  }
+```
+
+dao层：编写筛选条件的动态sql
+
+UserMapper.xml
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="my.suveng.demo.dao.mysql.UserMapper">
+  <resultMap id="BaseResultMap" type="my.suveng.demo.model.domain.User">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="sex" jdbcType="VARCHAR" property="sex" />
+    <result column="age" jdbcType="INTEGER" property="age" />
+    <result column="birth" jdbcType="TIMESTAMP" property="birth" />
+  </resultMap>
+  <sql id="search_condition">
+    where 1=1
+    <if test="record.userId !=null">
+      and u.user_id = #{record.userId,jdbcType=BIGINT}
+    </if>
+  </sql>
+  <select id="selectByPageNumSize" resultMap="BaseResultMap">
+    select * from sys_user u
+    <include refid="search_condition"/>
+  </select>
+
+</mapper>
+```
+
+> 具体查看代码仓库：`datatables使用教程`分支的 `搜索条件`
+
+### 效果截图
+
+![搜索条件](https://ws1.sinaimg.cn/large/006jIRTegy1fyd9m5j7b0j30mc064aa1.jpg)
 
 ## 参考文章
 
