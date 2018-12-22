@@ -1,92 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
-
-<url>
-  <loc>https://suveng.github.io/blog/</loc>
-  <lastmod>2018-12-20T15:12:25+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://suveng.github.io/blog/archive.html</loc>
-  <lastmod>2018-12-20T15:12:25+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://suveng.github.io/blog/tag.html</loc>
-  <lastmod>2018-12-20T15:12:25+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://suveng.github.io/blog/misc/2018121912.html</loc>
-  <lastmod>2018-12-20T15:12:25+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://suveng.github.io/blog/about.me.html</loc>
-  <lastmod>2018-12-20T15:12:25+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://suveng.github.io/blog/tag/MyBatis/index.html</loc>
-  <lastmod>2018-12-20T15:12:25+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://suveng.github.io/blog/misc/2018121812.html</loc>
-  <lastmod>2018-12-20T15:12:25+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://suveng.github.io/blog/tag/%e5%89%8d%e7%ab%af/index.html</loc>
-  <lastmod>2018-12-20T15:12:25+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://suveng.github.io/blog/misc/2018121412.html</loc>
-  <lastmod>2018-12-20T15:12:25+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://suveng.github.io/blog/tag/%e6%95%88%e7%8e%87/index.html</loc>
-  <lastmod>2018-12-20T15:12:25+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://suveng.github.io/blog/page2.html</loc>
-  <lastmod>2018-12-20T15:12:25+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://suveng.github.io/blog/misc/2018121212.html</loc>
-  <lastmod>2018-12-20T15:12:25+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://suveng.github.io/blog/misc/2018120119.html</loc>
-  <lastmod>2018-12-20T15:12:25+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://suveng.github.io/blog/tag/%e7%ae%97%e6%b3%95/index.html</loc>
-  <lastmod>2018-12-20T15:12:25+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://suveng.github.io/blog/tag/%e7%ac%ac%e4%b8%89%e6%96%b9%e7%b1%bb%e5%ba%93/index.html</loc>
-  <lastmod>2018-12-20T15:12:25+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://suveng.github.io/blog/index.html</loc>
-  <lastmod>2018-12-20T15:12:25+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url xmlns="">
+    <loc>https://suveng.github.io/blog/</loc>
+    <lastmod>2018-12-22</lastmod>
+  </url>
+  <url xmlns="">
+    <loc>https://suveng.github.io/blog/archive.html</loc>
+    <lastmod>2018-12-22</lastmod>
+  </url>
+  <url xmlns="">
+    <loc>https://suveng.github.io/blog/tag.html</loc>
+    <lastmod>2018-12-22</lastmod>
+  </url>
+  <url xmlns="">
+    <loc>https://suveng.github.io/blog/atom.xml</loc>
+    <lastmod>2018-12-22</lastmod>
+  </url>
+  <url xmlns="">
+    <loc>https://suveng.github.io/blog/tag/效率/index.html</loc>
+    <lastmod>2018-12-22</lastmod>
+  </url>
+  <url xmlns="">
+    <loc>https://suveng.github.io/blog/misc/2018122112.html</loc>
+    <lastmod>2018-12-22</lastmod>
+  </url>
+  <url xmlns="">
+    <loc>https://suveng.github.io/blog/about.me.html</loc>
+    <lastmod>2018-12-22</lastmod>
+  </url>
+  <url xmlns="">
+    <loc>https://suveng.github.io/blog/misc/2018121412.html</loc>
+    <lastmod>2018-12-22</lastmod>
+  </url>
+  <url xmlns="">
+    <loc>https://suveng.github.io/blog/misc/2018121812.html</loc>
+    <lastmod>2018-12-22</lastmod>
+  </url>
+  <url xmlns="">
+    <loc>https://suveng.github.io/blog/tag/前端/index.html</loc>
+    <lastmod>2018-12-22</lastmod>
+  </url>
+  <url xmlns="">
+    <loc>https://suveng.github.io/blog/misc/2018121212.html</loc>
+    <lastmod>2018-12-22</lastmod>
+  </url>
+  <url xmlns="">
+    <loc>https://suveng.github.io/blog/tag/第三方类库/index.html</loc>
+    <lastmod>2018-12-22</lastmod>
+  </url>
+  <url xmlns="">
+    <loc>https://suveng.github.io/blog/tag/算法/index.html</loc>
+    <lastmod>2018-12-22</lastmod>
+  </url>
+  <url xmlns="">
+    <loc>https://suveng.github.io/blog/misc/2018120119.html</loc>
+    <lastmod>2018-12-22</lastmod>
+  </url>
+  <url xmlns="">
+    <loc>https://suveng.github.io/blog/tag/MyBatis/index.html</loc>
+    <lastmod>2018-12-22</lastmod>
+  </url>
+  <url xmlns="">
+    <loc>https://suveng.github.io/blog/misc/2018121912.html</loc>
+    <lastmod>2018-12-22</lastmod>
+  </url>
+  <url xmlns="">
+    <loc>https://suveng.github.io/blog/page2.html</loc>
+    <lastmod>2018-12-22</lastmod>
+  </url>
+  <url xmlns="">
+    <loc>https://suveng.github.io/blog/index.html</loc>
+    <lastmod>2018-12-22</lastmod>
+  </url>
 </urlset>
