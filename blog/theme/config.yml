@@ -6,6 +6,7 @@ copy:
     - google336ec595eaa24ef4.html
     - favicon.ico
     - sitemap.xml
+    - sitemapGen.jar
 # I18n Support
 lang:
     archive:
