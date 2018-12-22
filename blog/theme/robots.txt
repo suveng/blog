@@ -7,3 +7,6 @@ Disallow: /css/
 Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
+
+
+Sitemap: https://suveng.github.io/blog/sitemap.xml 
