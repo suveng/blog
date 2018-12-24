@@ -69,7 +69,7 @@
 				.treeBar > ul > li > ul > li > ul > li { list-style-type: square; }
 			/* common */
 				.treeBar {
-					z-index: 99999; position: fixed; top: 10%; right: 0; max-width: 300px; max-height: 88%;
+					z-index: 99999; position: fixed; top: 10%; right: 0; max-width: 300px; max-height: 60%;
 					border: 1px solid #ddd; overflow-y: auto; overflow-x: visible; background-color: rgba(255, 255, 255, .9);
 				}
 				.treeBar-resize {
