@@ -2,8 +2,12 @@
 <html>
 
 <head>
+    {{template "head" .}}
+    <meta name="keywords" content="{{range .Tags}}{{.}},{{end}}">
+    <meta name="description" content="{{.Title}}">
+    <meta name="author" content="{{.Author.Name}}">
     <style>
-    .k-catelog-list {
+        .k-catelog-list {
         width: 300px;
         height: 300px;
         position: fixed;
@@ -40,10 +44,6 @@
         color: white;
     }
     </style>
-    {{template "head" .}}
-    <meta name="keywords" content="{{range .Tags}}{{.}},{{end}}">
-    <meta name="description" content="{{.Title}}">
-    <meta name="author" content="{{.Author.Name}}">
     <title>{{.Title}}</title>
 </head>
 
@@ -92,8 +92,9 @@
     </article>
     {{template "footer" .}}
     <script src="{{.Site.Root}}/bundle/index.js"></script>
+    <script type="text/javascript" src="{{.Site.Root}}/bundle/katelog.min.js"></script>
     <script>
-    new Katelog({
+    new katelog({
         contentEl: 'content',
         catelogEl: 'catelogList',
         linkClass: 'k-catelog-link',
