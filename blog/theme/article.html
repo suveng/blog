@@ -6,44 +6,7 @@
     <meta name="keywords" content="{{range .Tags}}{{.}},{{end}}">
     <meta name="description" content="{{.Title}}">
     <meta name="author" content="{{.Author.Name}}">
-    <style>
-        .k-catelog-list {
-        width: 300px;
-        height: 300px;
-        position: fixed;
-        left: 20px;
-        top: 100px;
-        overflow: hidden;
-        border: 1px solid #e0e0e0;
-    }
-
-    .k-catelog-list>ul {
-        padding: 0;
-    }
-
-    .k-catelog-list li {
-        list-style: none;
-    }
-
-    .k-catelog-link {
-        cursor: pointer;
-        display: block;
-        padding: 8px 12px;
-        text-decoration: none;
-        transition: background 0.5s;
-        -moz-transition: background 0.5s;
-        /* Firefox 4 */
-        -webkit-transition: background 0.5s;
-        /* Safari and Chrome */
-        -o-transition: background 0.5s;
-        /* Opera */
-    }
-
-    .k-catelog-link-active {
-        background: #333;
-        color: white;
-    }
-    </style>
+    
     <title>{{.Title}}</title>
 </head>
 
@@ -92,20 +55,7 @@
     </article>
     {{template "footer" .}}
     <script src="{{.Site.Root}}/bundle/index.js"></script>
-    <script type="text/javascript" src="{{.Site.Root}}/bundle/katelog.min.js"></script>
-    <script>
-    new katelog({
-        contentEl: 'content',
-        catelogEl: 'catelogList',
-        linkClass: 'k-catelog-link',
-        linkActiveClass: 'k-catelog-link-active',
-        supplyTop: 20,
-        selector: ['h2', 'h3'],
-        active: function(el) {
-            console.log(el);
-        }
-    });
-    </script>
+    <script type="text/javascript" src="{{.Site.Root}}/bundle/treeBar.js"></script>
 </body>
 
 </html>
