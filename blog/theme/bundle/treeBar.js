@@ -162,7 +162,7 @@
 
 			// 1. 获取DOM
 			var hList = document.querySelector(treeBar.site.tagName)
-						.querySelectorAll('h1, h2, h3, h4, h5, h6');
+						.querySelectorAll('h2, h3, h4');
 			// 2. 构建数据
 			var tree = transformTree(Array.from(hList));
 			// 3. 构建DOM
