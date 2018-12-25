@@ -59,7 +59,7 @@
             name: '',
             tagName: '',
         },
-        className: 'treeBar',
+        className: 'treeBar treeBar-slide',
         style: `
 			/* 样式重置 */
 				html { scroll-behavior: smooth; }
