@@ -77,13 +77,13 @@
 					position: absolute; /*cursor: col-resize;*/ width: 5px; left: -2px; top: 0; bottom: 0;
 				}
 				.treeBar-btn {
-					box-sizing: border-box; position: absolute; top: -1px; left: -1px; width: 72px; height: 28px;
+					box-sizing: border-box; position: sticky; top: -1px; left: -1px; width: 72px; height: 28px;
 					padding: 0; border: 1px solid #ddd; border-radius: 3px; box-shadow: 0 1px 1px 1px #ddd;
 					font-size: 14px; background-color: #fff; vertical-align: middle; text-align: center;
 					outline: none; cursor: pointer;color: #fff;background-color: #293846;
 				}
 				.treeBar > ul {
-					padding: 30px 10px 10px 25px;background-color: #f0f0f0l;
+					padding: 0px 10px 10px 25px;background-color: #f0f0f0l;
 				}
 				.treeBar > ul > li a {
 					line-height: 30px; /*overflow: hidden; white-space: nowrap; text-overflow: ellipsis;*/
