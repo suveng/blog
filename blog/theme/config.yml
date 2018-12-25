@@ -11,12 +11,12 @@ copy:
 lang:
     archive:
         en: ARCHIVE
-        zh: 归档
+        zh: 内容
         ru: Архив
         ja: アーカイブ
     tag:
         en: TAG
-        zh: 标签
+        zh: 分类
         ru: Теги
         ja: タグ
     rss:

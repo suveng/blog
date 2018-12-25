@@ -1,0 +1,1 @@
+git config core.autocrlf false && git add . -A && git commit -m "deploy at %date% %time%" && git push origin source
