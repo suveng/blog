@@ -1,0 +1,1 @@
+git add . && git commit -m "deploy at %date% %time%" && git push origin source
