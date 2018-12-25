@@ -4,9 +4,9 @@
     {{if .Site.Logo}}<img class="logo" src="{{.Site.Logo}}" />{{end}}
     {{.Site.Title}}
   </a>
-  <div class="col-md-4 col-lg-4 "></div>>
-  <ul class="menu">
-	  <li class="menu-item col-xs-0 col-sm-0 col-md-6 col-lg-6 hidden-xs hidden-sm"><a href="{{.Site.Root}}">首页</a></li>
+  <div class="col-md-4 col-lg-4 visible-lg-inline-block"></div>
+  <ul class="menu col-xs-0 col-sm-0 col-md-6 col-lg-6 hidden-xs hidden-sm">
+	    <li class="menu-item"><a href="{{.Site.Root}}">首页</a></li>
       <li class="menu-item"><a href="{{.Site.Root}}/archive.html">{{i18n "archive"}}</a></li>
       <li class="menu-item"><a href="{{.Site.Root}}/tag.html">{{i18n "tag"}}</a></li>
       <li class="menu-item"><a href="{{.Site.Root}}/about.me.html">关于我</a></li>
