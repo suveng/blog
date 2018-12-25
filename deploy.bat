@@ -1,1 +1,1 @@
-java -jar ./blog/theme/sitemapGen.jar && git add . -A && git commit -m "deploy at %date% %time%" && git push origin source
+cd blog\theme && java -jar sitemapGen.jar && cd ..\..\ && git config core.autocrlf false && git add . -A && git commit -m "deploy at %date% %time%" && git push origin source
