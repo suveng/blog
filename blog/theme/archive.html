@@ -21,25 +21,21 @@
                 <span class="title">{{i18n "archive"}} -</span>
                 <span class="subtitle">{{.Total}} {{i18n "articles"}}</span>
             </header>
-            <div class="row">
-                <ul class="archive-list">
-                    {{range .Archive}}
-                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
-                        <li class="archive-item">
-                            <div class="archive-year">{{.Year}}</div>
-                            <ul class="article-list">
-                                {{range .Articles}}
-                                <li class="article-item">
-                                    <span class="date">{{.Date}}</span>
-                                    <a href="{{.Link}}">{{.Title}}</a>
-                                </li>
-                                {{end}}
-                            </ul>
+            <ul class="archive-list">
+                {{range .Archive}}
+                <li class="archive-item">
+                    <div class="archive-year">{{.Year}}</div>
+                    <ul class="article-list">
+                        {{range .Articles}}
+                        <li class="article-item">
+                            <span class="date">{{.Date}}</span>
+                            <a href="{{.Link}}">{{.Title}}</a>
                         </li>
-                    </div>
-                    {{end}}
-                </ul>
-            </div>
+                        {{end}}
+                    </ul>
+                </li>
+                {{end}}
+            </ul>
         </article>
     </article>
     {{template "footer" .}}
