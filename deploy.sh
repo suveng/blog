@@ -1,6 +1,6 @@
 #!/bin/sh
 
-time=$(date "+%Y%m%d-%H%M%S")
+time=$(date "+%Y-%m-%d %H:%M:%S")
 
 cd blog/theme 
 java -jar sitemapGen.jar
