@@ -28,11 +28,9 @@
                 {{i18n "tag"}}<b class="caret"></b>
               </a>
               <ul class="dropdown-menu">
-                <li><a href="#">jmeter</a></li>
-                <li><a href="#">EJB</a></li>
-                <li><a href="#">Jasper Report</a></li>
-                <!-- <li class="divider"></li> -->
-                <!-- <li><a href="#">分离的链接</a></li> -->
+                {{range .Tag}}
+                <li><a href="{{$.Site.Root}}/tag/{{.Name}}/index.html">{{.Name}}</a></li>
+                {{end}}
               </ul>
             </li>
             <li><a href="{{.Site.Root}}/about.me.html">关于</a></li>
