@@ -253,6 +253,9 @@ a:hover {
 .main.page .article-list .article:last-child {
     border-bottom: 0;
     margin-bottom: 60px;
+    margin: 0;
+    border: 0;
+    padding: 0;
 }
 
 .main.page .article-list .empty {
