@@ -27,7 +27,7 @@
             <div class="row">
                 <ul class="article-list">
                     {{range .Articles}}
-                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                         <li class="article">
                             <a class="title" href="{{$.Site.Root}}/{{.Link}}">{{if .Top}}<span class="top">[{{i18n "top"}}]</span>{{end}}{{.Title}}
                         {{if .Cover}}<div class="cover" style="background-image:url({{.Cover}});"></div>{{end}}
