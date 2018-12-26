@@ -163,7 +163,7 @@
 
             // 1. 获取DOM
             var hList = document.querySelector(treeBar.site.tagName)
-                .querySelectorAll('h2, h3, h4');
+                .querySelectorAll('h2, h3');
             // 2. 构建数据
             var tree = transformTree(Array.from(hList));
             // 3. 构建DOM
