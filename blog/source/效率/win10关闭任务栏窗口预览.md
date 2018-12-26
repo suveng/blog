@@ -3,6 +3,7 @@ date: 2018-12-21 12:00:00 +0800
 update: 2018-12-21 12:00:00 +0800
 author: me
 cover: https://ws1.sinaimg.cn/large/006jIRTegy1fyebrct1o0j31kw0w07ig.jpg
+preview:  Windows 10是美国微软公司研发的跨平台及设备应用的操作系统。是微软发布的最后一个独立Windows版本
 tags:
 
   - 效率

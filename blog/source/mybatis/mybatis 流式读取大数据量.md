@@ -3,10 +3,10 @@ date: 2018-12-19 12:00:00 +0800
 update: 2018-12-19 12:00:00 +0800
 author: me
 cover: https://ws1.sinaimg.cn/large/006jIRTegy1fyd7n95kxsj31hc0u0nb7.jpg
+preview:  JDBC三种读取方式：1.一次获取全部。2.流式：多次获取，一次一行。3.游标：多次获取，一次多行
 tags:
 
   - MyBatis
-  preview:  JDBC三种读取方式：1.一次获取全部。2.流式：多次获取，一次一行。3.游标：多次获取，一次多行
 
 ---
 

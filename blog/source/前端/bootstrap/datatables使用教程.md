@@ -1,12 +1,13 @@
-﻿title: bootstrap-datatables使用教程
+title: bootstrap-datatables使用教程
 date: 2018-12-18 12:00:00 +0800
 update: 2018-12-20 15:00:00 +0800
 author: me
 cover: https://ws1.sinaimg.cn/large/006jIRTegy1fyd7q1vnfgj31z4140k2q.jpg
+preview:  Datatables是一款jquery表格插件。它是一个高度灵活的工具，可以将任何HTML表格添加高级的交互功能。
 tags:
 
   - 前端
-preview:  Datatables是一款jquery表格插件。它是一个高度灵活的工具，可以将任何HTML表格添加高级的交互功能。
+
 
 ---
 

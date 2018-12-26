@@ -3,10 +3,11 @@ date: 2018-12-12 12:00:00 +0800
 update: 2018-12-12 12:00:00 +0800
 author: me
 cover: https://ws1.sinaimg.cn/large/006jIRTegy1fyd7oyvhzuj31z4140tm1.jpg
+preview:  Joda项目为Java平台提供了高质量的低级库。Joda-Time为Java日期和时间类提供了高质量的替代品
 tags:
 
   - 第三方类库
-preview:  Joda项目为Java平台提供了高质量的低级库。Joda-Time为Java日期和时间类提供了高质量的替代品
+
 
 ---
 

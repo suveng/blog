@@ -3,6 +3,7 @@ date: 2018-12-14 12:00:00 +0800
 update: 2018-12-14 12:00:00 +0800
 author: me
 cover: https://ws1.sinaimg.cn/large/006jIRTegy1fyd7q1xo61j31kw0w0dol.jpg
+preview:  sublime 是一款小巧绿色且速度非常快的代码编辑器，下面介绍一下它的安装和插件的使用
 tags:
 
   - 效率
