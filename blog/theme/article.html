@@ -14,7 +14,7 @@
         {{template "header" .}}
         <!-- 目录容器 -->
         <ul class="dropdown-menu tag-list">
-            {{range .Tags}}
+            {{range .Tag}}
             <li class="tag-item"><a class="tag-name" href="{{$.Site.Root}}/tag/{{.Name}}/index.html"> {{.Name}} </a></li>
             {{end}}
         </ul>
