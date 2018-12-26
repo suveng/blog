@@ -159,27 +159,35 @@ catch (IOException e)
 
 ##### 处理元素数据
 
-* `attr(String key)`获取和`attr(String key, String value)`设置属性
+* `attr(String key)`获取和
+  `attr(String key, String value)`设置属性
 * `attributes()` 获得所有属性
 * `id()`，`className()`和`classNames()`
-* `text()`获取和`text(String value)`设置文本内容
-* `html()`获取和`html(String value)`设置内部HTML内容
+* `text()`获取和
+  `text(String value)`设置文本内容
+* `html()`获取和
+  `html(String value)`设置内部HTML内容
 * `outerHtml()` 获取外部HTML值
-* `data()`获取数据内容（例如`script`和`style`标签）
+* `data()`获取数据内容
+  （例如`script`和`style`标签）
 * `tag()` 和 `tagName()`
 
 ##### 操纵HTML和文本
 
-* `append(String html)`， `prepend(String html)`
-* `appendText(String text)`， `prependText(String text)`
-* `appendElement(String tagName)`， `prependElement(String tagName)`
+* `append(String html)`， 
+  `prepend(String html)`
+* `appendText(String text)`， 
+  `prependText(String text)`
+* `appendElement(String tagName)`，
+   `prependElement(String tagName)`
 * `html(String value)`
 
 ### 使用selector-syntax查找元素
 
 #### 使用CSS或类似jquery的选择器语法来查找或操作元素。
 
-使用`Element.select(String selector)`和`Elements.select(String selector)`方法
+使用`Element.select(String selector)`
+和`Elements.select(String selector)`方法
 
 > jsoup元素支持[CSS](http://www.w3.org/TR/2009/PR-css3-selectors-20091215/)（或[jquery](http://jquery.com/)）之类的选择器语法来查找匹配元素，从而允许非常强大和健壮的查询。
 >
@@ -193,7 +201,8 @@ catch (IOException e)
 
 * `Element.id()`
 * `Element.tagName()`
-* `Element.className()` 和 `Element.hasClass(String className)`
+* `Element.className()` 
+  和 `Element.hasClass(String className)`
 
 #### 您有一个包含相对URL的HTML文档，您需要将其解析为绝对URL
 

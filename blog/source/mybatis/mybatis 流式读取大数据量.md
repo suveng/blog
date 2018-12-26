@@ -6,7 +6,7 @@ cover: https://ws1.sinaimg.cn/large/006jIRTegy1fyd7n95kxsj31hc0u0nb7.jpg
 tags:
 
   - MyBatis
-preview:  JDBC三种读取方式：1.一次全部（默认）：一次获取全部。2.流式：多次获取，一次一行。3.游标：多次获取，一次多行。由于生成报表逻辑要从数据库读取大量数据并在内存中加工处理后再生成Excel返回给客户端。
+  preview:  JDBC三种读取方式：1.一次获取全部。2.流式：多次获取，一次一行。3.游标：多次获取，一次多行
 
 ---
 

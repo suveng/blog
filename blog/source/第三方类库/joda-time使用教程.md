@@ -59,9 +59,12 @@ Windows 10 10.0
 ```java
  @Test
     public void testStrToJodaDate(){
-        DateTimeFormatter dateTimeFormatter = DateTimeFormat.forPattern(DATETIME_PATTERN);
+        DateTimeFormatter dateTimeFormatter =
+            DateTimeFormat.forPattern(DATETIME_PATTERN);
 
-        DateTime parse = DateTime.parse("2018-12-11 17:06:30", dateTimeFormatter);
+        DateTime parse = 
+            DateTime.parse("2018-12-11 17:06:30",
+                           dateTimeFormatter);
 
         System.out.println(parse);
     }
@@ -99,11 +102,13 @@ Windows 10 10.0
 ```java
 @Test
     public void testStrToDate(){
-        DateTimeFormatter dateTimeFormatter = DateTimeFormat.forPattern(DATE_PATTERN);
+        DateTimeFormatter dateTimeFormatter = 
+            DateTimeFormat.forPattern(DATE_PATTERN);
 
         String str="2018-12-07";
 
-        DateTime parse = DateTime.parse(str, dateTimeFormatter);
+        DateTime parse = DateTime.parse(str, 
+          							dateTimeFormatter);
 
         Date date = parse.toDate();
 
@@ -119,7 +124,8 @@ Windows 10 10.0
     public void testJodaToCalendar(){
         DateTime dateTime = new DateTime(new Date());
 
-        Calendar calendar = dateTime.toCalendar(Locale.CHINA);
+        Calendar calendar =
+            			dateTime.toCalendar(Locale.CHINA);
         System.out.println(calendar);
     }
 ```
@@ -131,7 +137,8 @@ Windows 10 10.0
     public void testJodaToStr(){
         DateTime dateTime = new DateTime();
         String string = dateTime.toString(TIME_PATTERN);
-        String string2 = dateTime.toString(TIME_PATTERN,Locale.CHINA);
+        String string2 = 
+            dateTime.toString(TIME_PATTERN,Locale.CHINA);
         System.out.println(string+string2);
     }
 ```
@@ -142,7 +149,8 @@ Windows 10 10.0
     @Test
     public void testDateToStr(){
         Date date = new Date();
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(DATETIME_PATTERN);
+        SimpleDateFormat simpleDateFormat = 
+            new SimpleDateFormat(DATETIME_PATTERN);
         String format = simpleDateFormat.format(date);
         System.out.println(format);
     }

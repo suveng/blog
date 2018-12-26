@@ -465,22 +465,18 @@ public class DatatablesController {
 DT自动请求的参数(Sent parameters)
 当开启了 服务器模式时，DataTables 会发送如下参数到服务器
 
-| 名称     | 类型                                                        | 描述                                                         |
-| -------- | ----------------------------------------------------------- | ------------------------------------------------------------ |
-| `draw`   | [`integerJS`](http://datatables.net/reference/type/integer) | 绘制计数器。这个是用来确保Ajax从服务器返回的是对应的（Ajax是异步的，因此返回的顺序是不确定的）。 要求在服务器接收到此参数后再返回（具体看 [下面](http://datatables.club/manual/server-side.html#returndata)） |
-| `start`  | [`integerJS`](http://datatables.net/reference/type/integer) | 第一条数据的起始位置，比如0代表第一条数据                    |
-| `length` | [`integerJS`](http://datatables.net/reference/type/integer) | 告诉服务器每页显示的条数，这个数字会等于返回的 `data`集合的记录数，可能会大于因为服务器可能没有那么多数据。这个也可能是-1，代表需要返回全部数据(尽管这个和服务器处理的理念有点违背) |
+* draw：绘制计数器。这个是用来确保Ajax从服务器返回的是对应的（Ajax是异步的，因此返回的顺序是不确定的）。 要求在服务器接收到此参数后再返回（具体看 [下面](http://datatables.club/manual/server-side.html#returndata)）
+* start：第一条数据的起始位置，比如0代表第一条数据
+* length：告诉服务器每页显示的条数，这个数字会等于返回的 `data`集合的记录数，可能会大于因为服务器可能没有那么多数据。这个也可能是-1，代表需要返回全部数据(尽管这个和服务器处理的理念有点违背)
 
 服务器需要返回的数据(Returned data)
 一旦 DataTables 发送了请求，上面的参数就会传送给服务器，那么你需要接受到这些参数并做相应的逻辑处理然后按照下面的格式讲组装好的JSON数据返回 （不是每个参数都需要接受处理，根据自己的业务需要）
 
-| 名称              | 类型                                                        | 描述                                                         |
-| ----------------- | ----------------------------------------------------------- | ------------------------------------------------------------ |
-| `draw`            | [`integerJS`](http://datatables.net/reference/type/integer) | **必要**。上面提到了，Datatables发送的draw是多少那么服务器就返回多少。 这里注意，作者出于安全的考虑，强烈要求把这个转换为整形，即数字后再返回，而不是纯粹的接受然后返回，这是 为了防止跨站脚本（XSS）攻击。 |
-| `recordsTotal`    | [`integerJS`](http://datatables.net/reference/type/integer) | **必要**。即没有过滤的记录数（数据库里总共记录数）           |
-| `recordsFiltered` | [`integerJS`](http://datatables.net/reference/type/integer) | **必要**。过滤后的记录数（如果有接收到前台的过滤条件，则返回的是过滤后的记录数） |
-| `data`            | [`arrayType`](https://datatables.net/reference/type/array)  | **必要**。表中中需要显示的数据。这是一个对象数组，也可以只是数组，区别在于 纯数组前台就不需要用 `columns`绑定数据，会自动按照顺序去显示 ，而对象数组则需要使用 `columns`绑定数据才能正常显示。 注意这个 `data`的名称可以由 [`ajaxOption`](http://datatables.club/reference/option/ajax.html)[`ajax不定时一讲` ](http://datatables.club/manual/daily/2016/04/18/option-ajax.html)的 [`ajax.dataSrcOption` ](http://datatables.club/reference/option/ajax.dataSrc.html)[`ajax.dataSrc 1不定时一讲`](http://datatables.club/manual/daily/2016/04/19/option-ajax-dataSrc1.html)[`ajax.dataSrc 2不定时一讲` ](http://datatables.club/manual/daily/2016/04/20/option-ajax-dataSrc2.html)控制 |
-| `error`           | [`stringJS`](http://datatables.net/reference/type/string)   | **可选**。你可以定义一个错误来描述服务器出了问题后的友好提示 |
+* draw：**必要**。上面提到了，Datatables发送的draw是多少那么服务器就返回多少。 这里注意，作者出于安全的考虑，强烈要求把这个转换为整形，即数字后再返回，而不是纯粹的接受然后返回，这是 为了防止跨站脚本（XSS）攻击。
+* recordsTotal: **必要**。即没有过滤的记录数（数据库里总共记录数）
+* recordsFiltered: **必要**。过滤后的记录数（如果有接收到前台的过滤条件，则返回的是过滤后的记录数）
+* data：**必要**。表中中需要显示的数据。这是一个对象数组，也可以只是数组，区别在于 纯数组前台就不需要用 `columns`绑定数据，会自动按照顺序去显示 ，而对象数组则需要使用 `columns`绑定数据才能正常显示。 注意这个 `data`的名称可以由 [`ajaxOption`](http://datatables.club/reference/option/ajax.html)[`ajax不定时一讲` ](http://datatables.club/manual/daily/2016/04/18/option-ajax.html)的 [`ajax.dataSrcOption` ](http://datatables.club/reference/option/ajax.dataSrc.html)[`ajax.dataSrc 1不定时一讲`](http://datatables.club/manual/daily/2016/04/19/option-ajax-dataSrc1.html)[`ajax.dataSrc 2不定时一讲` ](http://datatables.club/manual/daily/2016/04/20/option-ajax-dataSrc2.html)控制
+* error：**可选**。你可以定义一个错误来描述服务器出了问题后的友好提示
 
 ##### service层
 
