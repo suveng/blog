@@ -7,6 +7,6 @@ java -jar sitemapGen.jar
 cd ../../
 git config core.autocrlf
 git add . -A
-git commit -m "deploy at time"
+git commit -m "deploy at ${time}"
 git push origin source 
 
