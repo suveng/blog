@@ -6,7 +6,6 @@
     <meta name="keywords" content="{{range .Tags}}{{.}},{{end}}">
     <meta name="description" content="{{.Title}}">
     <meta name="author" content="{{.Author.Name}}">
-    
     <title>{{.Title}}</title>
 </head>
 
@@ -14,7 +13,11 @@
     <article class="container">
         {{template "header" .}}
         <!-- 目录容器 -->
-        
+        <ul class="dropdown-menu tag-list">
+            {{range .Tags}}
+            <li class="tag-item"><a class="tag-name" href="{{$.Site.Root}}/tag/{{.Name}}/index.html"> {{.Name}} </a></li>
+            {{end}}
+        </ul>
         <div class="k-catelog-list" id="catelogList"></div>
         <article class="main article">
             <h1 class="title">{{.Title}}</h1>
