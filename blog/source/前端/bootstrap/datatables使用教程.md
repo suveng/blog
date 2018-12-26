@@ -8,7 +8,6 @@ tags:
 
   - 前端
 
-
 ---
 
 ![封面图](https://ws1.sinaimg.cn/large/006jIRTegy1fyd7q1vnfgj31z4140k2q.jpg)
@@ -31,7 +30,7 @@ Datatables是一款jquery表格插件。它是一个高度灵活的工具，可�
 
 ## 安装配置
 
-> 本文代码仓库：[https://gitee.com/suwenguang/demo/tree/datatables使用教程](https://gitee.com/suwenguang/demo/tree/datatables%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B)
+> 本文代码仓库：[点击这里获取源码](https://gitee.com/suwenguang/demo/tree/datatables%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B)
 
 ### 步骤
 

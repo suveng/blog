@@ -30,13 +30,25 @@ win10关闭任务栏窗口预览的操作方法：
 
 
 
-2、在注册表左侧依次展开：HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced ；
+2、在注册表左侧依次展开：
+
+```
+HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced ；
+```
+
+
 
 > 没有则新建
 
 3、在右侧找到【ExtendedUIHoverTime】，将它的数值数据修改为9000；
 
-4、接着我们回到左侧，依次定位到：HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Taskband ；
+4、接着我们回到左侧，依次定位到：
+
+```xml
+HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Taskband ；
+```
+
+
 
 > 没有则新建
 

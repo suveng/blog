@@ -18,7 +18,7 @@ tags:
 
 ## 代码下载地址
 
-> https://github.com/suveng/demo/releases/tag/jsoupDemo 
+> [点击这里获取源码](https://github.com/suveng/demo/releases/tag/jsoupDemo ) 
 >
 > 实战获取githubpages的链接，并生成sitemap
 
@@ -67,13 +67,13 @@ Jsoup类的一些重要方法如下：
 
 该类表示通过Jsoup库加载HTML文档。可以使用此类执行适用于整个HTML文档的操作。
 
-Element类的重要方法可以参见 - <http://jsoup.org/apidocs/org/jsoup/nodes/Document.html> 。
+Element类的重要方法可以参见 - [这里](http://jsoup.org/apidocs/org/jsoup/nodes/Document.html) 。
 
 ### 3. org.jsoup.nodes.Element类
 
 HTML元素是由标签名称，属性和子节点组成。 使用Element类，您可以提取数据，遍历节点和操作HTML。
 
-Element类的重要方法可参见 - <http://jsoup.org/apidocs/org/jsoup/nodes/Element.html> 。
+Element类的重要方法可参见 - [这里](http://jsoup.org/apidocs/org/jsoup/nodes/Element.html) 。
 
 ## 简单使用
 
@@ -518,7 +518,7 @@ public class SiteMapXML {
 }
 ```
 
-> https://github.com/suveng/demo/releases/tag/jsoupDemo 
+> [点击这里获取源码](https://github.com/suveng/demo/releases/tag/jsoupDemo ) 
 >
 > 实战获取githubpages的链接，并生成sitemap
 
