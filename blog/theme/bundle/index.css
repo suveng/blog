@@ -882,8 +882,6 @@ a.name {
 }
 
 nav.navbar.navbar-default.col-sm-12.col-xs-12.col-md-12.col-lg-12 {
-    position: fixed;
-    margin-top: 26px;
     background-color: #FFF;
     border-color: #f3f3f3;
 }
