@@ -177,7 +177,7 @@
             var bodyWidth = body.offsetWidth;
             if (bodyWidth > 500) {
                 var elements = document.getElementsByClassName("treeBar");
-                if (elements[0].className！ == "treeBar") {
+                if (elements[0].className!== "treeBar") {
                     elements[0].className = "treeBar";
                 }
 
