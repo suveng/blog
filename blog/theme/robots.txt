@@ -1,12 +1,5 @@
 User-agent: *
-
-Allow: /
-Allow: /misc/
-Disallow: /js/
-Disallow: /css/
-Disallow: /fonts/
-Disallow: /vendors/
-Disallow: /fancybox/
+Allow:/
 
 
 Sitemap: https://suveng.github.io/blog/sitemap.xml 
