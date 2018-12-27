@@ -61,41 +61,41 @@
         },
         className: 'treeBar treeBar-slide',
         style: `
-			/* 样式重置 */
-				html { scroll-behavior: smooth; }
-				.treeBar ul { padding-left: 1.1em; margin: 0; }
-				.treeBar > ul > li { list-style-type: disc; }
-				.treeBar > ul > li > ul > li { list-style-type: circle; }
-				.treeBar > ul > li > ul > li > ul > li { list-style-type: square; }
-			/* common */
-				.treeBar {
-					z-index: 99999; position: fixed; top: 10%; right: 0; max-width: 300px; max-height: 60%;
-					border: 1px solid #ddd; overflow-y: auto; overflow-x: visible; background-color: rgba(255, 255, 255, .9);
-					border-radius: 16px;
-				}
-				.treeBar-resize {
-					position: absolute; /*cursor: col-resize;*/ width: 5px; left: -2px; top: 0; bottom: 0;
-				}
-				.treeBar-btn {
-					box-sizing: border-box; position: sticky; top: -1px; left: -1px; width: 72px; height: 28px;
-					padding: 0; border: 1px solid #ddd; border-radius: 3px; box-shadow: 0 1px 1px 1px #ddd;
-					font-size: 14px; background-color: #fff; vertical-align: middle; text-align: center;
-					outline: none; cursor: pointer;color: #fff;background-color: #293846;
-				}
-				.treeBar > ul {
-					padding: 0px 10px 10px 25px;background-color: #f0f0f0l;
-				}
-				.treeBar > ul > li a {
-					line-height: 30px; /*overflow: hidden; white-space: nowrap; text-overflow: ellipsis;*/
-					text-decoration: none; font-size: 14px; cursor: pointer; color: #121c27;
-				}
-				.treeBar > ul > li a:hover {
-					text-decoration: underline;
-				}
-			/* slideToggle */
-				.treeBar-slide { overflow-y: visible; }
-				.treeBar-slide .treeBar-btn { left: -71px; top: -1px; }
-				.treeBar-slide > ul { display: none; }`,
+            /* 样式重置 */
+                html { scroll-behavior: smooth; }
+                .treeBar ul { padding-left: 1.1em; margin: 0; }
+                .treeBar > ul > li { list-style-type: disc; }
+                .treeBar > ul > li > ul > li { list-style-type: circle; }
+                .treeBar > ul > li > ul > li > ul > li { list-style-type: square; }
+            /* common */
+                .treeBar {
+                    z-index: 99999; position: fixed; top: 10%; right: 0; max-width: 300px; max-height: 60%;
+                    border: 1px solid #ddd; overflow-y: auto; overflow-x: visible; background-color: rgba(255, 255, 255, .9);
+                    border-radius: 16px;
+                }
+                .treeBar-resize {
+                    position: absolute; /*cursor: col-resize;*/ width: 5px; left: -2px; top: 0; bottom: 0;
+                }
+                .treeBar-btn {
+                    box-sizing: border-box; position: sticky; top: -1px; left: -1px; width: 72px; height: 28px;
+                    padding: 0; border: 1px solid #ddd; border-radius: 3px; box-shadow: 0 1px 1px 1px #ddd;
+                    font-size: 14px; background-color: #fff; vertical-align: middle; text-align: center;
+                    outline: none; cursor: pointer;color: #fff;background-color: #293846;
+                }
+                .treeBar > ul {
+                    padding: 0px 10px 10px 25px;background-color: #f0f0f0l;
+                }
+                .treeBar > ul > li a {
+                    line-height: 30px; /*overflow: hidden; white-space: nowrap; text-overflow: ellipsis;*/
+                    text-decoration: none; font-size: 14px; cursor: pointer; color: #121c27;
+                }
+                .treeBar > ul > li a:hover {
+                    text-decoration: underline;
+                }
+            /* slideToggle */
+                .treeBar-slide { overflow-y: visible; }
+                .treeBar-slide .treeBar-btn { left: -71px; top: -1px; }
+                .treeBar-slide > ul { display: none; }`,
         innerDom: `<button class="treeBar-btn">TreeBar</button><div class="treeBar-resize"></div>`,
         matchSite: function() { /* 匹配站点 */
             var domain = location.href.match(/([\d\w]+)\.(com|cn|net|org|im|io|cc)/i);
@@ -105,19 +105,19 @@
             this.site.sync = siteInfo.sync || false;
             if (siteInfo.style) {
                 this.style += `
-					.treeBar {
-						top: ${siteInfo.style.top};
-						border-color: ${siteInfo.style.color};
-					}
-					.treeBar-btn {
-						border-color: ${siteInfo.style.color};
-						background-color: ${siteInfo.style.color};
-						color: #fff;
-					}
-					.treeBar > ul > li a {
-						color: ${siteInfo.style.color};
-					}
-				`;
+                    .treeBar {
+                        top: ${siteInfo.style.top};
+                        border-color: ${siteInfo.style.color};
+                    }
+                    .treeBar-btn {
+                        border-color: ${siteInfo.style.color};
+                        background-color: ${siteInfo.style.color};
+                        color: #fff;
+                    }
+                    .treeBar > ul > li a {
+                        color: ${siteInfo.style.color};
+                    }
+                `;
             }
         },
         createDom: function() { /* 创建DOM */
@@ -138,24 +138,24 @@
             };
             /*var resize = {};
             document.body.onmouseup = function() {
-            	console.log('up');
-            	resize.flag = false;
+                console.log('up');
+                resize.flag = false;
             };
             eResize.onmousedown = function() {
-            	resize.flag = true;
+                resize.flag = true;
             };
             document.body.onmousemove = function() {
-            	if (!resize.flag) return;
-            	if (resize.current === undefined) {
-            		resize.current = event.x;
-            		return;
-            	}
-            	var x = event.x - resize.current;
-            	if(Math.abs(x) >= 10) {
-            		tree.style.width = tree.offsetWidth - x + 'px';
-            		console.log(x);
-            		resize.current = event.x;
-            	}
+                if (!resize.flag) return;
+                if (resize.current === undefined) {
+                    resize.current = event.x;
+                    return;
+                }
+                var x = event.x - resize.current;
+                if(Math.abs(x) >= 10) {
+                    tree.style.width = tree.offsetWidth - x + 'px';
+                    console.log(x);
+                    resize.current = event.x;
+                }
             };*/
         },
         init: function() {
@@ -171,8 +171,18 @@
             treeBar.createDom();
             // 4. 注册事件
             treeBar.onEvent();
-
             console.timeEnd('TreeBar');
+            // 5. 动态获取窗口大小，选择展开还是收缩
+            var body = (document.compatMode && document.compatMode == 'CSS1Compat') ? document.documentElement : document.body;
+            var bodyWidth = body.offsetWidth;
+            if (bodyWidth > 500) {
+                var elements = document.getElementsByClassName("treeBar");
+                if (elements[0].className！ == "treeBar") {
+                    elements[0].className = "treeBar";
+                }
+
+            }
+
         }
     };
 
@@ -227,8 +237,8 @@
             var ul = item.sub ? compileList(item.sub) : '';
             list +=
                 `<li>
-					<a href="#${item.id}" title="${item.name}">${item.name}</a>${ul}
-				</li>`;
+                    <a href="#${item.id}" title="${item.name}">${item.name}</a>${ul}
+                </li>`;
         });
         return `<ul>${list}</ul>`;
     }
