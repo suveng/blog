@@ -5,10 +5,10 @@ site:
     limit: 8
     lang: zh
     theme: theme
-    url: http://suwenguang.gitee.io/blog/
+    url: https://suveng.github.io/blog/
     # comment: username
     root: /blog
-    link: "{category}/{year}{month}{day}{hour}.html"
+    link: "{year}{month}{day}/{title}.html"
 
 authors:
     me:
