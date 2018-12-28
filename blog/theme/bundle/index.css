@@ -782,6 +782,7 @@ a.name {
     padding: 0 15px;
     min-height: 100%;
     position: relative;
+    max-width: 80%
 
 }
 

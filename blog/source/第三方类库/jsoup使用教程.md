@@ -151,11 +151,30 @@ catch (IOException e)
 ##### 寻找元素
 
 * `getElementById(String id)`
+
 * `getElementsByTag(String tag)`
+
 * `getElementsByClass(String className)`
+
 * `getElementsByAttribute(String key)` （及相关方法）
-* 元素的兄弟姐妹：`siblingElements()`，`firstElementSibling()`，`lastElementSibling()`，`nextElementSibling()`，`previousElementSibling()`
-* 图：`parent()`，`children()`，`child(int index)`
+
+* 元素的兄弟姐妹：
+
+  ```js
+  siblingElements()
+  firstElementSibling()
+  lastElementSibling()
+  nextElementSibling()
+  previousElementSibling()
+  ```
+
+* 图：
+
+  ```js
+  parent()
+  children()
+  child(int index)
+  ```
 
 ##### 处理元素数据
 
