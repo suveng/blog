@@ -2,8 +2,8 @@ title: MyBatis 关联查询
 date: 2018-12-29 12:00:00 +0800
 update: 2018-12-29 12:00:00 +0800
 author: me
-cover: https://ws1.sinaimg.cn/large/006jIRTegy1fyd7n95kxsj31hc0u0nb7.jpg
-preview:  我们对现实中的业务模型进行拆分，封装在不同的数据表中，表与表之间存在着一对多或是多对多的对应关系。那么Mybatis中是如何实现这种多表关系的映射呢？
+cover: http://ww1.sinaimg.cn/large/006jIRTely1fynzlv29doj31hc0u0wom.jpg
+preview:  表与表之间存在着一对多或是多对多的对应关系。Mybatis中是如何实现这种多表关系的映射
 tags:
 
   - MyBatis
