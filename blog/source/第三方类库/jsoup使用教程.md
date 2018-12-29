@@ -3,7 +3,7 @@ date: 2018-12-24 8:00:00 +0800
 update: 2018-12-24 8:00:00 +0800
 author: me
 cover: https://ws1.sinaimg.cn/large/006jIRTegy1fyhl621hvrj31kw0w0nc6.jpg
-preview:  JSoup是一个用于处理HTML的Java库，它提供了一个非常方便类似于使用DOM，CSS和jquery的方法的API来提取和操作数据
+preview:  JSoup是一个用于处理HTML的Java库，它提供了类似于使用jquery的方法的API来提取和操作数据
 tags:
 
   - 第三方类库
