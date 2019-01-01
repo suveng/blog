@@ -10,52 +10,54 @@
 </head>
 
 <body>
-  <img href="{{.Author.Avatar}}" style="display:none; width=300px height=300px" />
-    <article class="container">
-        {{template "header" .}}
-        <!-- 目录容器 -->
-        <div class="k-catelog-list" id="catelogList"></div>
-        <article class="main article">
-            <h1 class="title">{{.Title}}</h1>
-            <section class="info">
-                {{if .Author.Avatar}}<span class="avatar" style="background-image: url({{.Author.Avatar}});"></span>{{end}}
-                {{if .Author.Name}}<a class="name" href="{{.Site.Root}}/about.{{.Author.Id}}.html">{{.Author.Name}}</a>{{end}}
-                {{if .Update}}
-                <span class="date" data-time="{{.Update}}"><span class="from"></span></span>
-                {{else}}
-                <span class="date" data-time="{{.Date}}"><span class="from"></span></span>
-                {{end}}
-                <span class="tags">{{range .Tags}}<a class="tag" href="{{$.Site.Root}}/tag/{{.}}/index.html">{{.}}</a>{{end}}</span>
-                <span id="busuanzi_container_page_pv" class="date">被围观了<span id="busuanzi_value_page_pv"></span>次</span>
-            </section>
-            <article id='content' class="content">{{.Content}}</article>
-            <section class="author">
-                <a class="name" href="{{.Site.Root}}/about.{{.Author.Id}}.html">
-                        {{if .Author.Avatar}}<div class="avatar" style="background-image: url({{.Author.Avatar}});"></div>{{end}}
-                        {{.Author.Name}}
-                    </a>
-                <div class="intro">{{.Author.Intro}}</div>
-            </section>
-            <section class="recommend">
-                {{if .Prev}}
-                <section class="nav prev{{if .Next}} more{{end}}">
-                    <div class="head">{{i18n "prev_reading"}}</div>
-                    <a class="link" href="{{.Site.Root}}/{{.Prev.Link}}">{{.Prev.Title}}</a>
+    <div style="display: none;">
+        <img href="{{.Author.Avatar}}" style="width=300px height=300px" />
+    </div>
+        <article class="container">
+            {{template "header" .}}
+            <!-- 目录容器 -->
+            <div class="k-catelog-list" id="catelogList"></div>
+            <article class="main article">
+                <h1 class="title">{{.Title}}</h1>
+                <section class="info">
+                    {{if .Author.Avatar}}<span class="avatar" style="background-image: url({{.Author.Avatar}});"></span>{{end}}
+                    {{if .Author.Name}}<a class="name" href="{{.Site.Root}}/about.{{.Author.Id}}.html">{{.Author.Name}}</a>{{end}}
+                    {{if .Update}}
+                    <span class="date" data-time="{{.Update}}"><span class="from"></span></span>
+                    {{else}}
+                    <span class="date" data-time="{{.Date}}"><span class="from"></span></span>
+                    {{end}}
+                    <span class="tags">{{range .Tags}}<a class="tag" href="{{$.Site.Root}}/tag/{{.}}/index.html">{{.}}</a>{{end}}</span>
+                    <span id="busuanzi_container_page_pv" class="date">被围观了<span id="busuanzi_value_page_pv"></span>次</span>
                 </section>
-                {{end}}
-                {{if .Next}}
-                <section class="nav next{{if .Prev}} more{{end}}">
-                    <div class="head">{{i18n "next_reading"}}</div>
-                    <a class="link" href="{{.Site.Root}}/{{.Next.Link}}">{{.Next.Title}}</a>
+                <article id='content' class="content">{{.Content}}</article>
+                <section class="author">
+                    <a class="name" href="{{.Site.Root}}/about.{{.Author.Id}}.html">
+                    {{if .Author.Avatar}}<div class="avatar" style="background-image: url({{.Author.Avatar}});"></div>{{end}}
+                    {{.Author.Name}}
+                </a>
+                    <div class="intro">{{.Author.Intro}}</div>
                 </section>
-                {{end}}
-            </section>
-            {{template "comment" .}}
+                <section class="recommend">
+                    {{if .Prev}}
+                    <section class="nav prev{{if .Next}} more{{end}}">
+                        <div class="head">{{i18n "prev_reading"}}</div>
+                        <a class="link" href="{{.Site.Root}}/{{.Prev.Link}}">{{.Prev.Title}}</a>
+                    </section>
+                    {{end}}
+                    {{if .Next}}
+                    <section class="nav next{{if .Prev}} more{{end}}">
+                        <div class="head">{{i18n "next_reading"}}</div>
+                        <a class="link" href="{{.Site.Root}}/{{.Next.Link}}">{{.Next.Title}}</a>
+                    </section>
+                    {{end}}
+                </section>
+                {{template "comment" .}}
+            </article>
         </article>
-    </article>
-    {{template "footer" .}}
-    <script src="{{.Site.Root}}/bundle/index.js"></script>
-    <script type="text/javascript" src="{{.Site.Root}}/bundle/treeBar.js"></script>
+        {{template "footer" .}}
+        <script src="{{.Site.Root}}/bundle/index.js"></script>
+        <script type="text/javascript" src="{{.Site.Root}}/bundle/treeBar.js"></script>
 </body>
 
 </html>

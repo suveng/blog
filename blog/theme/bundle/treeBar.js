@@ -96,7 +96,7 @@
                 .treeBar-slide { overflow-y: visible; }
                 .treeBar-slide .treeBar-btn { left: -71px; top: -1px; }
                 .treeBar-slide > ul { display: none; }`,
-        innerDom: `<button class="treeBar-btn">TreeBar</button><div class="treeBar-resize"></div>`,
+        innerDom: `<button class="treeBar-btn">目录</button><div class="treeBar-resize"></div>`,
         matchSite: function() { /* 匹配站点 */
             var domain = location.href.match(/([\d\w]+)\.(com|cn|net|org|im|io|cc)/i);
             this.site.name = (domain && domain[1]);
