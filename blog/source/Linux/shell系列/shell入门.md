@@ -6,7 +6,6 @@ cover: https://ws1.sinaimg.cn/large/006jIRTegy1fyr6vg8t8dj31kw0w0tl6.jpg
 preview:  Shell本身是一个用 C 语言编写的程序，它是用户使用 Linux 的桥梁，用户的大部分工作都是通过 Shell 完成
 tags:
 
-  - Linux
   - shell系列
 
 ---
@@ -16,6 +15,18 @@ tags:
 ![封面图](https://ws1.sinaimg.cn/large/006jIRTegy1fyr6vg8t8dj31kw0w0tl6.jpg)
 
 
+
+# shell入门系列( 一 )
+
+## awk
+
+### 基本语法
+
+```bash
+awk "BEGIN {...} pattern {...} END{...}"
+```
+
+### 特殊变量
 
 
 
