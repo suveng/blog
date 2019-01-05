@@ -1,1 +1,5 @@
-git config core.autocrlf false && git add . -A && git commit -m "test at %date% %time%" && git push origin source
+time=$(date "+%Y-%m-%d %H:%M:%S")
+git config core.autocrlf
+git add . -A
+git commit -m "deploy at ${time}"
+git push origin source 
