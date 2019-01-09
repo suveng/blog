@@ -89,3 +89,5 @@ syntax on
 ## bash提示符的变量
 
 `$PS1` 改变这个，就改变bash 的提示符的样式。
+
+## [我的主页](https://suveng.github.io/blog/)

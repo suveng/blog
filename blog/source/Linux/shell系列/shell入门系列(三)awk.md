@@ -115,3 +115,4 @@ echo | awk ' {"grep root /etc/passwd" | getline cmdout; print cmdout} '
 awk 'BEGIN{} {for(ii=0 ; i<3; i++){ print i }} END{}' awk.log
 ```
 
+## [我的主页](https://suveng.github.io/blog/)
