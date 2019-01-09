@@ -3,7 +3,7 @@ date: 2019-01-09 10:00:00 +0800
 update: 2019-01-09 10:00:00 +0800
 author: me
 cover: https://ws1.sinaimg.cn/large/006jIRTegy1fz08m96klgj31z4140aqo.jpg
-preview:  这是Linux命令和性能监控系列的一部分。vmstat和iostat两个命令都适用于所有主要的类unix系统（Linux/unix/FreeBSD/Solaris）
+preview:  这是Linux命令和性能监控系列的一部分。vmstat和iostat两个命令都适用于所有主要的类unix系统
 tags:
 
   - shell系列
