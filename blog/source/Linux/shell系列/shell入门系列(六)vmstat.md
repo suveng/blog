@@ -2,7 +2,7 @@ title: shell入门系列( 六 )vmstat
 date: 2019-01-09 10:00:00 +0800
 update: 2019-01-09 10:00:00 +0800
 author: me
-cover: https://ws1.sinaimg.cn/large/006jIRTegy1fyzcylktt2j31hc0u0aqp.jpg
+cover: https://ws1.sinaimg.cn/large/006jIRTegy1fz08m96klgj31z4140aqo.jpg
 preview:  这是Linux命令和性能监控系列的一部分。vmstat和iostat两个命令都适用于所有主要的类unix系统（Linux/unix/FreeBSD/Solaris）
 tags:
 
@@ -12,7 +12,7 @@ tags:
 
 [TOC]
 
-![封面图](https://ws1.sinaimg.cn/large/006jIRTegy1fyzcylktt2j31hc0u0aqp.jpg)
+![封面图](https://ws1.sinaimg.cn/large/006jIRTegy1fz08m96klgj31z4140aqo.jpg)
 
 # shell入门系列( 六 )vmstat
 
@@ -89,7 +89,7 @@ vmstat -a
 
 效果
 
-![预览]()
+![预览](https://ws1.sinaimg.cn/large/006jIRTegy1fz08nsl4ceg30j50ab0sr.gif)
 
 ### 2. 每X秒执行vmstat，共执行N次
 
@@ -101,7 +101,7 @@ vmstat 2 3
 
 效果
 
-![预览]()
+![预览](https://ws1.sinaimg.cn/large/006jIRTegy1fz08omieqwg30j50ab3yn.gif)
 
 ### 3. 带时间戳的vmstat命令
 
@@ -113,7 +113,7 @@ vmstat -t 2 3
 
 效果
 
-![预览]()
+![预览](https://ws1.sinaimg.cn/large/006jIRTegy1fz08pet03tg30j50ab0sx.gif)
 
 ### 4. 统计各种计数器
 
@@ -125,7 +125,7 @@ vmstat -s
 
 效果
 
-![预览]()
+![预览](https://ws1.sinaimg.cn/large/006jIRTegy1fz08q9rtvlg30j50fvwer.gif)
 
 ### 5. 磁盘统计信息
 
@@ -137,7 +137,7 @@ vmstat -d
 
 效果
 
-![预览]()
+![预览](https://ws1.sinaimg.cn/large/006jIRTegy1fz08qykuxtg30j50fvt8s.gif)
 
 ### 6. 以MB为单位输出统计信息
 
@@ -149,7 +149,7 @@ vmstat	-S M 2 3
 
 效果
 
-![预览]()
+![预览](https://ws1.sinaimg.cn/large/006jIRTegy1fz08rx26etg30j50fvt8v.gif)
 
 ## 参考文章
 
