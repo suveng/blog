@@ -43,15 +43,35 @@ find /usr -name '*.txt' -print
 # -i 选项不分大小写
 find /usr -iname '*.txt' -print 
 
-# 寻找多个 类型文件名
+# 使用通配符寻找多个 类型文件名
 find /usr/include \(-iname  '*.c'  -o -name "*.x" \) -print
 ```
 
-指定目录找文件夹名
+### 指定目录找文件夹名
 
 ```bash
-# 找文件夹 用 -path 选项
+# 找文件夹 用 -path 选项 会把路径 符合规则的全部取出
 find /usr/include -path "X*" -print # 以X 开头的文件名字
+```
 
+### 使用正则表达式搜索
+
+```bash
+# 启用正则表达式 -regextype "posix-egrep" -regex
+find /usr/include -regextype "posix-egrep" -regex '.*(\.c|\.x)$'   -print # 搜索以.c 或者 .x 结尾的文件
+```
+
+### 排除搜索
+
+```bash
+# 使用 ！过滤掉符合规则的文件
+find /usr/find ! -iname "*.h" -print
+```
+
+### 查找文件类型
+
+```bash
+# f 是所有文件  d 是所有目录
+find /usr/include -type  f -print 
 ```
 
