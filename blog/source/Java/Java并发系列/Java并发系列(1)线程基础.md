@@ -2,7 +2,7 @@ title:  Java并发系列(1)线程基础
 date: 2019-01-16 12:00:00 +0800
 update: 2019-01-16 12:00:00 +0800
 author: me
-cover: https://ws1.sinaimg.cn/large/006jIRTegy1fz08sday3vj31jk15odv2.jpg
+cover: https://ws1.sinaimg.cn/large/006jIRTegy1fz8odfdnpgj31jk0v9awl.jpg
 preview:  线程是一个独立执行的调用序列,同一个进程的线程在同一时刻共享一些系统资源,也能访问同一个进程所创建的对象资源
 tags:
 
@@ -14,7 +14,7 @@ tags:
 
 [TOC]
 
-![封面图](https://ws1.sinaimg.cn/large/006jIRTegy1fz08sday3vj31jk15odv2.jpg)
+![封面图](https://ws1.sinaimg.cn/large/006jIRTegy1fz8odfdnpgj31jk0v9awl.jpg)
 
 # Java并发系列(1)线程基础
 
@@ -81,7 +81,35 @@ public static void main(String[] args) {
 
 #### 系统进程生命周期
 
+![进程状态图](https://ws1.sinaimg.cn/large/006jIRTegy1fz8nknrx4gj30ij06n3yi.jpg)
 
+(1) 就绪→执行 
+处于就绪状态的进程，当进程调度程序为之分配了处理机后，该进程便由就绪状态转变成执行状态。
+
+(2) 执行→就绪 
+处于执行状态的进程在其执行过程中，因分配给它的一个时间片已用完或更高优先级的进程抢占而不得不让出处理机，于是进程从执行状态转变成就绪状态。
+
+(3) 执行→阻塞 
+正在执行的进程因等待某种事件发生而无法继续执行时，便从执行状态变成阻塞状态。
+
+(4) 阻塞→就绪 
+处于阻塞状态的进程，若其等待的事件已经发生，于是进程由阻塞状态转变为就绪状态。
+
+(5) 运行→终止
+
+程序执行完毕，撤销而终止
+
+以上是最经典也是最基本的三种进程状态，但现在的操作系统都根据需要重新设计了一些新的状态。
+
+* 运行状态（TASK_RUNNING）：是运行态和就绪态的合并，表示进程正在运行或准备运行，Linux 中使用TASK_RUNNING 宏表示此状态
+* 可中断睡眠状态（浅度睡眠）（TASK_INTERRUPTIBLE）：进程正在睡眠（被阻塞），等待资源到来是唤醒，也可以通过其他进程信号或时钟中断唤醒，进入运行队列。Linux 使用TASK_INTERRUPTIBLE 宏表示此状态。
+* 不可中断睡眠状态（深度睡眠状态）（TASK_UNINTERRUPTIBLE）：
+* 其和浅度睡眠基本类似，但有一点就是不可被其他进程信号或时钟中断唤醒。Linux 使用TASK_UNINTERRUPTIBLE 宏表示此状态。
+
+* 暂停状态（TASK_STOPPED）：进程暂停执行接受某种处理。如正在接受调试的进程处于这种状态，Linux 使用TASK_STOPPED 宏表示此状态。
+* 僵死状态（TASK_ZOMBIE）：进程已经结束但未释放PCB，Linux 使用TASK_ZOMBIE 宏表示此状态
+
+![](https://ws1.sinaimg.cn/large/006jIRTegy1fz8no3jr8lj30ig0ajmyt.jpg)
 
 #### Java线程状态转换
 
@@ -158,7 +186,7 @@ public static void main(String[] args) {
     }
 ```
 
-![Java线程状态转换](https://ws1.sinaimg.cn/large/006jIRTegy1fz8kzagq1bj30u90hyac1.jpg)
+![Java线程状态转换](https://ws1.sinaimg.cn/large/006jIRTegy1fz8mey5cyrj30u90hy40g.jpg)
 
 
 
