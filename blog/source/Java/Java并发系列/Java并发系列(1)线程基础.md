@@ -79,7 +79,7 @@ public static void main(String[] args) {
 
 ## 线程生命周期
 
-#### 系统进程生命周期
+### 系统进程生命周期
 
 ![进程状态图](https://ws1.sinaimg.cn/large/006jIRTegy1fz8nknrx4gj30ij06n3yi.jpg)
 
@@ -111,7 +111,7 @@ public static void main(String[] args) {
 
 ![](https://ws1.sinaimg.cn/large/006jIRTegy1fz8no3jr8lj30ig0ajmyt.jpg)
 
-#### Java线程状态转换
+### Java线程状态转换
 
 在Java中，线程只能有这6种中的一种状态： new, runnable, blocked, waiting, time waiting, 或 terminated.
 
@@ -215,6 +215,7 @@ public static void main(String[] args) {
 ## 参考文章
 
 * [importnew](http://www.importnew.com/26834.html)
+* [fangjian0423.github.io](https://fangjian0423.github.io/2016/06/04/java-thread-state/)
 
 ## [我的主页](https://suveng.github.io/blog/)
 
