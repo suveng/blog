@@ -17,3 +17,5 @@ tags:
 ![封面图](https://ws1.sinaimg.cn/large/006jIRTegy1fz08sday3vj31jk15odv2.jpg)
 
 # MySQL技巧系列(2)字符类操作
+
+## [我的主页](https://suveng.github.io/blog/)

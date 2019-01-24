@@ -17,3 +17,12 @@ tags:
 ![封面图](https://ws1.sinaimg.cn/large/006jIRTegy1fz08sday3vj31jk15odv2.jpg)
 
 # MySQL技巧系列(6)禁止重置查询缓存
+
+## 代码
+
+```sql
+SELECT SQL_NO_CACHE * FROM TABLE //禁止缓存当前查询的结果
+RESET QUERY CACHE //充值查询缓存
+```
+
+## [我的主页](https://suveng.github.io/blog/)
