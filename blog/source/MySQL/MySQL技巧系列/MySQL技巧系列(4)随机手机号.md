@@ -2,7 +2,7 @@ title: MySQL技巧系列(4)随机手机号
 date: 2019-01-24 15:00:00 +0800
 update: 2019-01-24 15:00:00 +0800
 author: me
-cover: https://ws1.sinaimg.cn/large/006jIRTegy1fz08sday3vj31jk15odv2.jpg
+cover: https://ws1.sinaimg.cn/large/006jIRTegy1fzk6obwqvmj31kw0w0n63.jpg
 preview:  作为搬砖党的一族们，对MySQL一定再熟悉不过了
 tags:
 
@@ -14,7 +14,7 @@ tags:
 
 [TOC]
 
-![封面图](https://ws1.sinaimg.cn/large/006jIRTegy1fz08sday3vj31jk15odv2.jpg)
+![封面图](https://ws1.sinaimg.cn/large/006jIRTegy1fzk6obwqvmj31kw0w0n63.jpg)
 
 # MySQL技巧系列(4)随机手机号
 

@@ -17,7 +17,7 @@ tags:
 # windows转换U盘文件系统格式
 
 ```bash
-convert X: \FS:NTFS
+convert X: /FS:NTFS
 ```
 
 `X:` 是U盘的盘符，比如H盘
