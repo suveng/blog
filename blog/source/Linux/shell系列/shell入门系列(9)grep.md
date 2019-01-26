@@ -2,7 +2,7 @@ title: shell入门系列(9)grep
 date: 2019-01-20 10:00:00 +0800
 update: 2019-01-20 10:00:00 +0800
 author: me
-cover: http://ww1.sinaimg.cn/large/006jIRTegy1fzdbahz994j31z4140npd.jpg
+cover: https://ws1.sinaimg.cn/large/006jIRTegy1fzk6vxq7vqj31kw0w0qej.jpg
 preview:  Shell本身是一个用 C 语言编写的程序，它是用户使用 Linux 的桥梁，用户的大部分工作都是通过 Shell 完成
 tags:
 
@@ -14,7 +14,7 @@ tags:
 
 [TOC]
 
-![封面图](http://ww1.sinaimg.cn/large/006jIRTegy1fzdbahz994j31z4140npd.jpg)
+![封面图](https://ws1.sinaimg.cn/large/006jIRTegy1fzk6vxq7vqj31kw0w0qej.jpg)
 
 # shell入门系列(9)grep
 
@@ -48,7 +48,7 @@ grep "bash" ~/.bashrc ~/.oneinstack
 
 ## 选项
 
-###  `-E` 
+###  `-E` 使用正则表达式
 
 使用正则表达式
 
@@ -60,7 +60,7 @@ egrep "[0-9]+" ~/.bashrc
 
 ![效果](http://ww1.sinaimg.cn/large/006jIRTegy1fzde5ckqulg30ig0abweg.gif)
 
-### `-v`
+### `-v` 排除内容
 
 排除内容。
 
@@ -71,7 +71,7 @@ grep -v "bash" ~/.bashrc
 
 ![效果](http://ww1.sinaimg.cn/large/006jIRTegy1fzde66ubuag30ig0abdfw.gif)
 
-### `-c`
+### `-c` 显示搜索行数
 
 显示搜索行数
 
@@ -82,7 +82,7 @@ grep -c "bash" ~/.bashrc
 
 ![效果](http://ww1.sinaimg.cn/large/006jIRTegy1fzde6ssfg5g30ig0abt8p.gif)
 
-### `-o`
+### `-o` 输出匹配到的内容
 
 输出匹配到的内容
 
@@ -100,7 +100,7 @@ grep -o "bash" ~/.bashrc | wc -l
 
 ![效果](http://ww1.sinaimg.cn/large/006jIRTegy1fzde7uoulog30ig0abwen.gif)
 
-### `-n`
+### `-n`带行号显示
 
 带行号显示
 
@@ -111,7 +111,7 @@ grep -n "bash" ~/.bashrc
 
 ![效果](http://ww1.sinaimg.cn/large/006jIRTegy1fzde8ev7lig30ig0abaa1.gif)
 
-### `-l`
+### `-l` 输出匹配到内容的源
 
 输出匹配到内容的源，这里我们用的源是文件。
 
@@ -149,7 +149,7 @@ kkl ddk llkd
 
 ![效果](http://ww1.sinaimg.cn/large/006jIRTegy1fzdeadkndng30ig0abt8r.gif)
 
-### `-L`
+###  `-L` 输出没有匹配到的源
 
 与 `-l` 相反 ，输出没有匹配到的源
 
