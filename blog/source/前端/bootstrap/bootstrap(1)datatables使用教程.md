@@ -1,4 +1,4 @@
-title: bootstrap-datatables使用教程
+title: bootstrap(1)datatables使用教程
 date: 2018-12-18 12:00:00 +0800
 update: 2018-12-20 15:00:00 +0800
 author: me

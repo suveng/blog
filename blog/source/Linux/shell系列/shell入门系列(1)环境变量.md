@@ -1,4 +1,4 @@
-title: shell入门系列( 一 )环境变量
+title: shell入门系列(1)环境变量
 date: 2019-01-01 12:00:00 +0800
 update: 2019-01-01 12:00:00 +0800
 author: me

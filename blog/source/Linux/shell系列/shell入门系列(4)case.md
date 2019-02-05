@@ -1,4 +1,4 @@
-title: shell入门系列( 四 )case
+title: shell入门系列(4)case
 date: 2019-01-04 12:00:00 +0800
 update: 2019-01-04 12:00:00 +0800
 author: me

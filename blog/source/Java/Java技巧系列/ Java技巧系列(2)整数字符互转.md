@@ -14,7 +14,7 @@ tags:
 
 [TOC]
 
-# ![封面图](http://ww1.sinaimg.cn/large/006jIRTegy1fzvxvipa7pj31n90xc1kx.jpg)
+![封面图](http://ww1.sinaimg.cn/large/006jIRTegy1fzvxvipa7pj31n90xc1kx.jpg)
 
 # Java技巧系列(2)整数字符互转
 

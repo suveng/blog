@@ -1,4 +1,4 @@
-title: ajax传参形式
+title: jQuery(1)ajax传参形式
 date: 2018-12-31 12:00:00 +0800
 update: 2018-12-31 23:00:00 +0800
 author: me

@@ -1,4 +1,4 @@
-title: MyBatis 流式读取MySQL大量数据
+title: MyBatis(2)流式读取大数据量
 date: 2018-12-19 12:00:00 +0800
 update: 2018-12-19 12:00:00 +0800
 author: me

@@ -1,4 +1,4 @@
-title: shell入门系列( 二 )别名
+title: shell入门系列(2)别名
 date: 2019-01-02 12:00:00 +0800
 update: 2019-01-02 12:00:00 +0800
 author: me

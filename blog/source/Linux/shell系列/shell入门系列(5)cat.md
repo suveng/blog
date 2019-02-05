@@ -1,4 +1,4 @@
-title: shell入门系列( 五 )cat
+title: shell入门系列(5)cat
 date: 2019-01-08 18:00:00 +0800
 update: 2019-01-08 18:00:00 +0800
 author: me

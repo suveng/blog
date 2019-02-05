@@ -1,4 +1,4 @@
-title: shell入门系列( 六 )vmstat
+title: shell入门系列(6)vmstat
 date: 2019-01-09 10:00:00 +0800
 update: 2019-01-09 10:00:00 +0800
 author: me

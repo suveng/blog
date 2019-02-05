@@ -1,4 +1,4 @@
-title: shell入门系列( 三 )awk
+title: shell入门系列(3)awk
 date: 2019-01-03 12:00:00 +0800
 update: 2019-01-03 12:00:00 +0800
 author: me
