@@ -2,7 +2,7 @@ title:  Java技巧系列(2)整数字符互转
 date: 2019-02-04 12:00:00 +0800
 update: 2019-02-04 12:00:00 +0800
 author: me
-cover: https://ws1.sinaimg.cn/large/006jIRTegy1fz08sday3vj31jk15odv2.jpg
+cover: http://ww1.sinaimg.cn/large/006jIRTegy1fzvxvipa7pj31n90xc1kx.jpg
 preview:  作为搬砖党的一族们，对类型转换一定再熟悉不过了，不要说你很少进行判空
 tags:
 
@@ -14,7 +14,7 @@ tags:
 
 [TOC]
 
-# ![封面图](https://ws1.sinaimg.cn/large/006jIRTegy1fz08sday3vj31jk15odv2.jpg)
+# ![封面图](http://ww1.sinaimg.cn/large/006jIRTegy1fzvxvipa7pj31n90xc1kx.jpg)
 
 # Java技巧系列(2)整数字符互转
 
