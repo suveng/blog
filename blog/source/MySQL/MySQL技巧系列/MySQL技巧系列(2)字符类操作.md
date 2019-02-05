@@ -20,6 +20,7 @@ tags:
 
 ## 一.字符串类 
 
+```sql
 CONCAT (string2  [,... ]) //连接字串
 INSTR (string ,substring ) //返回substring首次在string中出现的位置,不存在返回0
 LCASE (string2 ) //转换成小写
@@ -35,9 +36,13 @@ RPAD (string2 ,length ,pad) //在str后用pad补充,直到长度为length
 RTRIM (string2 ) //去除后端空格
 STRCMP (string1 ,string2 ) //逐字符比较两字串大小,
 SUBSTRING (str , position  [,length ]) //从str的position开始,取length个字符,TRIM([[BOTH|LEADING|TRAILING][padding] FROM]string2) //去除指定位置的指定字符 UCASE (string2 ) //转换成大写 RIGHT(string2,length) //取string2最后length个字符 SPACE(count) //生成count个空格 
+```
+
+
 
 ## 二.数学类
 
+```java
 ABS (number2 ) //绝对值
 BIN (decimal_number ) //十进制转二进制
 CEILING (number2 ) //向上取整
@@ -52,11 +57,14 @@ MOD (numerator ,denominator ) //求余
 POWER (number ,power ) //求指数
 RAND([seed]) //随机数
 ROUND (number  [,decimals ]) //四舍五入,decimals为小数位数]
-
 SIGN (number2 ) //返回符号,正负或0 SQRT(number2) //开平方
+```
+
+
 
 ## 三.日期时间类
 
+```java
 ADDTIME (date2 ,time_interval ) //将time_interval加到date2
 CONVERT_TZ (datetime2 ,fromTZ ,toTZ ) //转换时区
 CURRENT_DATE (  ) //当前日期
@@ -88,17 +96,23 @@ LAST_DAY(date) //date的月的最后日期
 MICROSECOND(datetime) //微秒
 MONTH(datetime) //月
 MINUTE(datetime) //分
-
- 
-
+    
 附:可用在INTERVAL中的类型
-DAY ,DAY_HOUR ,DAY_MINUTE ,DAY_SECOND ,HOUR ,HOUR_MINUTE ,HOUR_SECOND ,MINUTE ,MINUTE_SECOND,MONTH ,SECOND ,YEAR 
+
+DAY ,DAY_HOUR ,DAY_MINUTE ,DAY_SECOND ,HOUR ,HOUR_MINUTE ,HOUR_SECOND ,MINUTE ,MINUTE_SECOND,MONTH ,SECOND ,YEAR
+ 
+```
 
 ## 三、其它
 
+```java
  select last_insert_id(); //返回最后添加的自增ID，注意，当insert into s(name) values('a'),('b'),('c')时，返回的只是插入a记录的自增id,而不是c的自增id
 
 select row_count() ;//返回上一次操作数据的影响行数，如插入新数据会返回影响的行数，只返回最近的一次
+
+```
+
+
 
 ## 转载
 
