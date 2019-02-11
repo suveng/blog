@@ -1,26 +1,20 @@
 <div class="social-share" data-disabled="google,twitter,facebook,diandian" data-description="{{.Title}}">
     分享：
 </div>
+<div id="gitalk-container"></div> 
+ <script type="text/javascript">
+    var gitalk = new Gitalk({
 
-<div id="vssue"></div>
-<!-- 或：对于 Vue 完整版，可以使用模板（template） -->
-<script>
-new Vue({
-  el: '#vssue',
-
-  data: {
-	title: 'Vssue Dev',
-	options: {
-	  owner: 'suveng',
-	  repo: 'blog',
-	  clientId: '8829bc0456e5ea4dbc7d',
-	  clientSecret: '5c2836f23b09ac7e11b6aed7bf67ed6f5b9f6997',
-	},
-  },
-
-  template: `<vssue :title="title" :options="options"></vssue>`,
-})
-</script>
+    // gitalk的主要参数
+		clientID: 'da5b4586f3771bac0644',
+		clientSecret: '7561257a2cfd2a4c70ba698b3081568b977b45a6',
+		repo: `blog`,
+		owner: 'suveng',
+		admin: ['suveng'],
+		id: 'window.location.pathname',
+    });
+    gitalk.render('gitalk-container');
+</script> 
 <!-- <div id="vcomments"></div> -->
 <!-- <script> -->
 <!-- new Valine({ -->
