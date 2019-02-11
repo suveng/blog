@@ -1,32 +1,27 @@
 <div class="social-share" data-disabled="google,twitter,facebook,diandian" data-description="{{.Title}}">
     分享：
 </div>
-  <div id="vssue"></div>
-  
 
-  
-  
-  <!-- 对于 Vue 运行时版，使用渲染函数（render function） -->
-  <script>
-    new Vue({
-      el: '#vssue',
+<div id="vssue"></div>
+<!-- 或：对于 Vue 完整版，可以使用模板（template） -->
+<script>
+new Vue({
+  el: '#vssue',
 
-      render: h = > h('Vssue', {
-        props: {
-          // 在这里设置当前页面对应的 Issue 标题
-          title: 'Vssue Dev',
+  data: {
+	title: 'Vssue Dev',
 
-          // 在这里设置你使用的平台的 OAuth App 配置
-          options: {
-            owner: 'suveng',
-            repo: 'blog',
-            clientId: '8829bc0456e5ea4dbc7d',
-            clientSecret: '5c2836f23b09ac7e11b6aed7bf67ed6f5b9f6997',
-          },
-        }
-      })
-    })
-  </script>
+	options: {
+	  owner: 'suveng',
+	  repo: 'blog',
+	  clientId: '8829bc0456e5ea4dbc7d',
+	  clientSecret: '5c2836f23b09ac7e11b6aed7bf67ed6f5b9f6997',
+	},
+  },
+
+  template: `<vssue :title="title" :options="options"></vssue>`,
+})
+</script>
 <!-- <div id="vcomments"></div> -->
 <!-- <script> -->
 <!-- new Valine({ -->
