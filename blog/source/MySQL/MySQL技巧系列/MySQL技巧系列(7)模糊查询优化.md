@@ -1,6 +1,6 @@
 title: MySQL技巧系列(7)模糊查询优化
-date: 2019-01-24 18:00:00 +0800
-update: 2019-01-24 18:00:00 +0800
+date: 2019-02-07 18:00:00 +0800
+update: 2019-02-07 18:00:00 +0800
 author: me
 cover: https://ws1.sinaimg.cn/large/006jIRTegy1fzk6qm4rraj31jk0v9tg3.jpg
 preview:  作为搬砖党的一族们，对MySQL一定再熟悉不过了，*MySQL* 是最流行的关系型数据库管理系统
