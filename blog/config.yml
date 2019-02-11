@@ -8,7 +8,7 @@ site:
     url: https://suveng.github.io/blog/
     # comment: username
     root: /blog
-    link: "{year}{month}{day}/{day}.html"
+    link: "{year}{month}{day}/suveng.html"
 
 authors:
     me:

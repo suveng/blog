@@ -1,6 +1,6 @@
 title:  Java技巧系列(1)优雅判空
-date: 2019-01-08 12:00:00 +0800
-update: 2019-01-08 12:00:00 +0800
+date: 2018-02-08 12:00:00 +0800
+update: 2018-02-08 12:00:00 +0800
 author: me
 cover: http://ww1.sinaimg.cn/large/006jIRTegy1fzvyjmjoobj31hc0u0qh2.jpg
 preview:  作为搬砖党的一族们，对判空一定再熟悉不过了，不要说你很少进行判空
