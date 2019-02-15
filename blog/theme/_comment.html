@@ -1,13 +1,28 @@
 <div class="social-share" data-disabled="google,twitter,facebook,diandian" data-description="{{.Title}}">
     分享：
 </div>
-  <div id="vssue"></div>
+<div id="gitalk-container"></div>
+<<script type="text/javascript">
+  var gitalk = new Gitalk({
+    clientID: '3a43184a0785d6df7e74',
+    clientSecret: 'df3a9c7c0f62e2b52ac67c5c98ae9e20308e4367',
+    repo: 'blog',
+    owner: 'suveng',
+    admin: ['GitHub repo owner and collaborators, only these guys can initialize github issues'],
+    id: location.pathname,      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  });
+  gitalk.render('gitalk-container');
+</script>
+
+
+  <!-- <div id="vssue"></div> -->
 <!-- 或： Vue 完整版 (runtime + compiler) -->
-<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+<!-- <script src="https://unpkg.com/vue/dist/vue.min.js"></script> -->
 <!-- Vssue Github 版  -->
-<script src="https://unpkg.com/vssue/dist/vssue.github.min.js"></script>
+<!-- <script src="https://unpkg.com/vssue/dist/vssue.github.min.js"></script> -->
 <!-- 或：对于 Vue 完整版，可以使用模板（template） -->
-<script>
+<!-- <script>
   new Vue({
     el: '#vssue',
 
@@ -24,7 +39,7 @@
 
     template: `<vssue :title="title" :options="options"></vssue>`,
   })
-</script>
+</script> -->
 <!-- <div id="gitalk-container"></div>
  <script type="text/javascript">
     var gitalk = new Gitalk({
