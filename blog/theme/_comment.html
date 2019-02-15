@@ -12,7 +12,7 @@
     el: '#vssue',
 
     data: {
-      title: document.getElementsByClassName("title")[0].innerText,
+      title: function(){ return document.getElementsByClassName("title")[0].innerText},
       options: {
         owner: 'suveng',
         repo: 'blog',
