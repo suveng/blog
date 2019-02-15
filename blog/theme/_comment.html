@@ -12,6 +12,8 @@
     el: '#vssue',
 
     data: {
+      title: function(){ return document.getElementsByClassName("title")[0].innerText},
+      labels: [],
       options: {
         owner: 'suveng',
         repo: 'blog',
