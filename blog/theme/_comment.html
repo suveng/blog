@@ -1,7 +1,7 @@
 <div class="social-share" data-disabled="google,twitter,facebook,diandian" data-description="{{.Title}}">
     分享：
 </div>
-<div id="gitalk-container"></div>
+<!-- <div id="gitalk-container"></div>
 <script type="text/javascript">
   var gitalk = new Gitalk({
     clientID: '3a43184a0785d6df7e74',
@@ -13,22 +13,22 @@
     distractionFreeMode: false  // Facebook-like distraction free mode
   });
   gitalk.render('gitalk-container');
-</script>
+</script> -->
 
 
-  <!-- <div id="vssue"></div> -->
+  <div id="vssue"></div>
 <!-- 或： Vue 完整版 (runtime + compiler) -->
-<!-- <script src="https://unpkg.com/vue/dist/vue.min.js"></script> -->
+<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
 <!-- Vssue Github 版  -->
-<!-- <script src="https://unpkg.com/vssue/dist/vssue.github.min.js"></script> -->
+<script src="https://unpkg.com/vssue/dist/vssue.github.min.js"></script>
 <!-- 或：对于 Vue 完整版，可以使用模板（template） -->
-<!-- <script>
+<script>
   new Vue({
     el: '#vssue',
 
     data: {
       title: function(){ return document.getElementsByClassName("title")[0].innerText},
-      labels: [],
+      labels: [location.pathname],
       options: {
         owner: 'suveng',
         repo: 'blog',
@@ -39,21 +39,8 @@
 
     template: `<vssue :title="title" :options="options"></vssue>`,
   })
-</script> -->
-<!-- <div id="gitalk-container"></div>
- <script type="text/javascript">
-    var gitalk = new Gitalk({
+</script>
 
-    // gitalk的主要参数
-		clientID: '3a43184a0785d6df7e74',
-		clientSecret: 'df3a9c7c0f62e2b52ac67c5c98ae9e20308e4367',
-		repo: 'blog',
-		owner: 'suveng',
-		admin: ['suveng'],
-		id: 'window.location.pathname',
-    });
-    gitalk.render('gitalk-container');
-</script>  -->
 <!-- <div id="vcomments"></div> -->
 <!-- <script> -->
 <!-- new Valine({ -->
