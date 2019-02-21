@@ -6,7 +6,7 @@ cover: http://ww1.sinaimg.cn/large/006jIRTegy1fzwiafdswej31jk0v9qp2.jpg
 preview:  TravisCI是在软件开发领域中的一个在线的，分布式的持续集成服务，用来构建及测试在GitHub托管的代码。
 tags:
 
-  -  算法
+  -  持续集成
 
 ---
 
@@ -42,23 +42,73 @@ tags:
 
 选择其中一个仓库，进行设置。
 
-这里需要设置一些变量，以便第3步的配置。
+这里需要设置一些变量，以便第3步的配置。类似下面界面，如果后面travis界面更新了，自己找方法设置，这里贴图。
+
+![travis settings](https://ws1.sinaimg.cn/large/006jIRTegy1g0e0gzr6kuj30no0crq3c.jpg)
+
+
 
 ```xml
 GH_REF：仓库地址
-GH_TOKEN：生成的令牌
-P_BRANCH：推送的pages分支
-U_EMAIL：邮箱
-U_NAME：名称
+GH_TOKEN：github生成的令牌,具体百度'生成github 令牌'
+P_BRANCH：推送的部署了pages的分支名称
+U_EMAIL：git.email邮箱
+U_NAME：git.username名称
 ```
 
 ### 3. 配置travisCI
 
+这里贴出npm的通用配置，因为里面的配置，emm...新手可能看不懂，没关系，现在去了解一波，然后回来设置，天资聪慧的你可能光是看英文就懂了呢。这里给出[阮一峰的教程](http://www.ruanyifeng.com/blog/2017/12/travis_ci_tutorial.html)
 
+```yml
+language: node_js
+# nodejs版本
+node_js:
+    - '6'
+
+# Travis-CI Caching
+cache:
+  directories:
+    - node_modules
+
+
+# S: Build Lifecycle
+install:
+  - npm install
+
+before_script:
+
+# 无其他依赖项所以执行npm run build 构建就行了
+script:
+  - npm run build
+
+after_script:
+  - cd ./dist
+  - git init
+  - git config user.name "${U_NAME}"
+  - git config user.email "${U_EMAIL}"
+  - git add .
+  - git commit -m "Update tools"
+  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:${P_BRANCH}
+# E: Build LifeCycle
+
+branches:
+  only:
+    - develop
+env:
+ global:
+   # 我将其添加到了travis-ci的环境变量中
+```
 
 ### 4. 配置github page
 
+emm...这个是要去github的仓库上面的settings里面配置一下，选择一个分支作为源就ok了。弄这个的原理就是我们的travis的脚本里面，npm run build 后的 dist的页面会拷到这个分支里面。然后就可以展示了。[具体可以参考](https://blog.csdn.net/x550392236/article/details/76828159)
+
+**注意：** 图片和样式的路径问题，自己手动配置一下。
+
 ### 5. push 并 自动构建
+
+现在只要对本地的develop分支提交代码，travis就会对我们的代码进行 `npm run　build` 编译。并且将dist 的内容`push --force` 到githu pages 的分支，现在就可以通过github的站点域名访问我们的项目了。
 
 ## 参考文章
 
