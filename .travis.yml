@@ -12,6 +12,8 @@ script:
   - git commit -m "update blogs"
   # github pages
   - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
+    # gitee pages
+  - git push --force --quiet "https://suveng:${GE_TOKEN}@${GE_REF}" master:master
   # coding pages
   - git push --force --quiet "https://suveng:${CO_TOKEN}@${CO_REF}" master:master
   # seo
@@ -23,3 +25,4 @@ env:
   global:
     - GH_REF: github.com/suveng/blog
     - CO_REF: git.dev.tencent.com/suveng/blog.git
+    - GE_REF: gitee.com/suveng/blog.git
