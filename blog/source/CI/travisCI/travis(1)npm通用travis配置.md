@@ -2,7 +2,7 @@ title:  TravisCI(1)npm通用travis配置
 date: 2019-02-21 13:00:00 +0800
 update: 2019-02-21 13:00:00 +0800
 author: me
-cover: http://ww1.sinaimg.cn/large/006jIRTegy1fzwiafdswej31jk0v9qp2.jpg
+cover: https://ws1.sinaimg.cn/large/006jIRTegy1g0eyv9pzqsj32ll1gnx6s.jpg
 preview:  TravisCI是在软件开发领域中的一个在线的，分布式的持续集成服务，用来构建及测试在GitHub托管的代码。
 tags:
 
@@ -14,7 +14,7 @@ tags:
 
 [TOC]
 
-![封面图]()
+![封面图](https://ws1.sinaimg.cn/large/006jIRTegy1g0eyv9pzqsj32ll1gnx6s.jpg)
 
 # travis(1)npm通用travis配置
 
