@@ -2,7 +2,7 @@ title:  Java并发系列(1)线程基础
 date: 2019-01-16 12:00:00 +0800
 update: 2019-01-16 12:00:00 +0800
 author: me
-cover: http://ww1.sinaimg.cn/large/006jIRTegy1fzvyi4jgpoj31hc0u0dz8.jpg
+cover: https://ws1.sinaimg.cn/large/006jIRTegy1g0iva08i7ej31jk0v9h73.jpg
 preview:  线程是一个独立执行的调用序列,同一个进程的线程在同一时刻共享一些系统资源,也能访问同一个进程所创建的对象资源
 tags:
 
@@ -14,7 +14,7 @@ tags:
 
 [TOC]
 
-![封面图](http://ww1.sinaimg.cn/large/006jIRTegy1fzvyi4jgpoj31hc0u0dz8.jpg)
+![封面图](https://ws1.sinaimg.cn/large/006jIRTegy1g0iva08i7ej31jk0v9h73.jpg)
 
 # Java并发系列(1)线程基础
 
