@@ -2,7 +2,7 @@ title:  Java技巧系列(1)优雅判空
 date: 2018-02-08 12:00:00 +0800
 update: 2018-02-08 12:00:00 +0800
 author: me
-cover: http://ww1.sinaimg.cn/large/006jIRTegy1fzvyjmjoobj31hc0u0qh2.jpg
+cover: https://ws1.sinaimg.cn/large/006jIRTegy1g0iv2d0npgj31z4140e81.jpg
 preview:  作为搬砖党的一族们，对判空一定再熟悉不过了，不要说你很少进行判空
 tags:
 
@@ -14,7 +14,7 @@ tags:
 
 [TOC]
 
-![封面图](http://ww1.sinaimg.cn/large/006jIRTegy1fzvyjmjoobj31hc0u0qh2.jpg)
+![封面图](https://ws1.sinaimg.cn/large/006jIRTegy1g0iv2d0npgj31z4140e81.jpg)
 
 # Java技巧系列( 一 )优雅判空
 

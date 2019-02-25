@@ -2,7 +2,7 @@ title: (5)JMeter5.1默认使用中文
 date: 2019-02-25 8:00:00 +0800
 update: 2019-02-25 8:00:00 +0800
 author: me
-cover: https://ws1.sinaimg.cn/large/006jIRTegy1fyljrzvpjsj31jk0v9gqg.jpg
+cover: https://ws1.sinaimg.cn/large/006jIRTegy1g0iv326a7jj31hc0u0460.jpg
 preview:  JMeter是Apache组织开发的基于Java的压力测试工具,用于测试静态和动态资源;
 tags:
 
@@ -12,7 +12,7 @@ tags:
 
 [TOC]
 
-![封面图]()
+![封面图](https://ws1.sinaimg.cn/large/006jIRTegy1g0iv326a7jj31hc0u0460.jpg)
 
 # (5)Window  JMeter5.1默认使用中文
 
