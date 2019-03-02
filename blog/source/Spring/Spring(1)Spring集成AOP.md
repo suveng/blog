@@ -2,7 +2,7 @@ title: Spring(1)Spring集成AOP
 date: 2019-02-22 12:00:00 +0800
 update: 2019-02-22 12:00:00 +0800
 author: me
-cover: https://ws1.sinaimg.cn/large/006jIRTely1g0kz9p2y8jj31hc0u0gs2.jpg
+cover: https://ws1.sinaimg.cn/large/006jIRTegy1g0ogkggxraj31z4140qjo.jpg
 preview:  AOP通过提供另一种思考程序结构的方式来补充面向对象编程（OOP），在AOP模块化的单位是切面
 tags:
 
@@ -10,7 +10,7 @@ tags:
 
 ---
 
-![封面图]()
+![封面图](https://ws1.sinaimg.cn/large/006jIRTegy1g0ogkggxraj31z4140qjo.jpg)
 
 #  Spring(1)Spring集成AOP
 
@@ -136,11 +136,13 @@ public class AnnotationAspect {
 
 > 1.引入AOP的maven依赖，即可
 
+```xml
+<!--###############springboot-aop模块################-->
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-aop</artifactId>
+</dependency>
 ```
-
-```
-
-
 
 
 
