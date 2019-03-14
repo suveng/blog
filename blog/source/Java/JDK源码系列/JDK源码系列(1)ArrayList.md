@@ -2,7 +2,7 @@ title:  JDK源码系列(1)ArrayList
 date: 2015-01-02 13:00:00 +0800
 update: 2015-01-02 13:00:00 +0800
 author: me
-cover: http://ww1.sinaimg.cn/large/006jIRTegy1g11jh56ishj31z41404qp.jpg
+cover: http://ww1.sinaimg.cn/large/006jIRTegy1g12ngsepb6j33uw2klqv6.jpg
 preview:  ArrayList 是动态数组，它是线程不安全的，允许元素为null，底层数据结构依然是数组，拥有随机快速访问的能力
 tags:
 
@@ -14,7 +14,7 @@ tags:
 
 [TOC]
 
-![封面图]()
+![封面图](http://ww1.sinaimg.cn/large/006jIRTegy1g12ngsepb6j33uw2klqv6.jpg)
 
 # JDK源码系列(1)ArrayList
 
