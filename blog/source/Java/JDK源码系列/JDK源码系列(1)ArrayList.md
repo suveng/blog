@@ -20,6 +20,22 @@ tags:
 
 ## 概要
 
+### ArrayList总结
+
+1. **底层数组实现，使用默认构造方法初始化出来的容量是10**
+2. **扩容的长度是在原长度基础上加二分之一**
+3. **实现了RandomAccess接口，底层又是数组，get读取元素性能很好**
+4. **线程不安全，所有的方法均不是同步方法也没有加锁，因此多线程下慎用**
+5. **顺序添加很方便**
+6. **删除和插入需要复制数组 性能很差（可以使用LinkindList）**
+
+| 关注点             | 结论       |
+| ------------------ | ---------- |
+| 是否允许空？       | 允许       |
+| 是否允许重复数据？ | 允许       |
+| 是否有序？         | 有序       |
+| 是否线程安全？     | 非线程安全 |
+
 概括的说，ArrayList 是一个动态数组，它是线程不安全的，允许元素为null。 
 其底层数据结构依然是数组，它实现了`List<E>, RandomAccess, Cloneable, java.io.Serializable`接口，其中RandomAccess代表了其拥有随机快速访问的能力，ArrayList可以以O(1)的时间复杂度去根据下标访问元素。
 
@@ -35,7 +51,88 @@ tags:
 
 当每次修改结构时，增加导致扩容，或者删，都会修改`modCount`。
 
-## 构造方法
+### 为什么ArrayList的elementData是用transient修饰的？
+
+transient修饰的属性意味着不会被序列化，也就是说在序列化ArrayList的时候，不序列化elementData。
+
+为什么要这么做呢？
+
+1. elementData不总是满的，每次都序列化，会浪费时间和空间
+2. 重写了writeObject 保证序列化的时候虽然不序列化全部 但是有的元素都序列化
+
+所以说不是不序列化 而是不全部序列化。、
+
+### ArrayList和Vector的区别
+
+#### 标准答案
+
+1. ArrayList是线程不安全的，Vector是线程安全的
+2. 扩容时候ArrayList扩0.5倍，Vector扩1倍
+
+#### ArrayList有没有办法线程安全？
+
+Collections工具类有一个synchronizedList方法
+
+可以把list变为线程安全的集合，但是意义不大，因为可以使用Vector
+
+#### Vector为什么是线程安全的？
+
+就代码实现上来说，和ArrayList并没有很多逻辑上的区别，但是在Vector的关键方法都使用了synchronized修饰。
+
+> ## 1. 继承的父类和实现的接口
+
+```java
+public class ArrayList<E> extends AbstractList<E>
+        implements List<E>, RandomAccess, Cloneable, java.io.Serializable
+```
+
+ArrayList 继承了 AbstractList 类，此类提供了 List 接口的骨干实现，继承此类的子类适合用于“随机访问”数据存储（如数组），Vector 也是此类的子类。
+
+与 AbstractList 类对应的类是 AbstractSequentialList 类，继承该类的子类适合用于“连续访问”数据存储（如链接列表），代表的子类如 LinkedList 。
+
+ArrayList 实现了 List 接口，List 接口通常表示一个列表（数组、队列、链表、栈等），其中的元素可以重复，代表的实现类有 ArrayList、LinkedList、Stack、Vector。
+
+ArrayList 实现了 RandomAccess 接口，该接口为标记接口，用来表明其支持快速随机访问。
+
+ArrayList 实现了 Cloneable 接口，以指示 Object.clone() 方法可以合法地对该类实例进行按字段复制。
+
+ArrayList 实现了 Serializable 接口，因此它支持序列化，能够通过序列化传输。
+
+> ## 2. 属性
+
+```java
+/**
+ * 序列版本号
+ */
+private static final long serialVersionUID = 8683452581122892189L;
+
+/**
+ * 默认容量
+ */
+private static final int DEFAULT_CAPACITY = 10;
+
+/**
+ * 无参的空数组常量
+ */
+private static final Object[] EMPTY_ELEMENTDATA = {};
+
+/**
+ * 有参的空数组
+ */
+private static final Object[] DEFAULTCAPACITY_EMPTY_ELEMENTDATA = {};
+
+/**
+ * 存放元素的数组，从这可以发现ArrayList的底层实现就是一个Object数组
+ */
+transient Object[] elementData; 
+
+/**
+ * 当前的实际元素个数
+ */
+private int size;
+```
+
+> ## 3 构造方法
 
 ```java
 //默认构造函数里的空数组
@@ -309,18 +406,14 @@ private boolean batchRemove(Collection<?> c, boolean complement) {
 
 不会修改modCount，相对增删是高效的操作。
 
+```java
 public E set(int index, E element) {
     rangeCheck(index);//越界检查
     E oldValue = elementData(index); //取出元素 
     elementData[index] = element;//覆盖元素
     return oldValue;//返回元素
 }
-1
-2
-3
-4
-5
-6
+```
 
 ### 4 查
 
@@ -443,6 +536,48 @@ private class Itr implements Iterator<E> {
 扩容操作会导致数组复制，批量删除会导致 找出两个集合的交集，以及数组复制操作，因此，增、删都相对低效。 而 改、查都是很高效的操作。
 因此，结合特点，在使用中，以Android中最常用的展示列表为例，列表滑动时需要展示每一个Item（element）的数组，所以 查 操作是最高频的。相对来说，增操作 只有在列表加载更多时才会用到 ，而且是在列表尾部插入，所以也不需要移动数据的操作。而删操作则更低频。 故选用ArrayList作为保存数据的结构。
 在面试中还有可能会问到和Vector的区别，我大致看了一下Vector的源码，内部也是数组做的，区别在于Vector在API上都加了synchronized所以它是线程安全的，以及Vector扩容时，是翻倍size，而ArrayList是扩容50%。
+
+
+
+> ArrayList的实现中大量地调用了Arrays.copyof()和System.arraycopy()方法。我们有必要对这两个方法的实现做下深入的了解。
+
+首先来看Arrays.copyof()方法。它有很多个重载的方法，但实现思路都是一样的，我们来看泛型版本的源码：
+
+```java
+public static <T> T[] copyOf(T[] original, int newLength) {
+    return (T[]) copyOf(original, newLength, original.getClass());
+}
+```
+
+很明显调用了另一个copyof方法，该方法有三个参数，最后一个参数指明要转换的数据的类型，其源码如下：
+
+```java
+public static <T,U> T[] copyOf(U[] original, int newLength, Class<? extends T[]> newType) {
+    T[] copy = ((Object)newType == (Object)Object[].class)
+        ? (T[]) new Object[newLength]
+        : (T[]) Array.newInstance(newType.getComponentType(), newLength);
+    System.arraycopy(original, 0, copy, 0,
+                     Math.min(original.length, newLength));
+    return copy;
+}
+```
+
+这里可以很明显地看出，该方法实际上是在其内部又创建了一个长度为newlength的数组，调用System.arraycopy()方法，将原来数组中的元素复制到了新的数组中。
+
+下面来看System.arraycopy()方法。该方法被标记了native，调用了系统的C/C++代码，在JDK中是看不到的，但在openJDK中可以看到其源码。该函数实际上最终调用了C语言的memmove()函数，因此它可以保证同一个数组内元素的正确复制和移动，比一般的复制方法的实现效率要高很多，很适合用来批量处理数组。Java强烈推荐在复制大量数组元素时用该方法，以取得更高的效率。
+
+> 注意ArrayList的两个转化为静态数组的toArray方法。
+
+第一个，Object[] toArray()方法。该方法有可能会抛出java.lang.ClassCastException异常，如果直接用向下转型的方法，将整个ArrayList集合转变为指定类型的Array数组，便会抛出该异常，而如果转化为Array数组时不向下转型，而是将每个元素向下转型，则不会抛出该异常，显然对数组中的元素一个个进行向下转型，效率不高，且不太方便。
+
+第二个，<T> T[] toArray(T[] a)方法。该方法可以直接将ArrayList转换得到的Array进行整体向下转型（转型其实是在该方法的源码中实现的），且从该方法的源码中可以看出，参数a的大小不足时，内部会调用Arrays.copyOf方法，该方法内部创建一个新的数组返回，因此对该方法的常用形式如下：
+
+```java
+public static Integer[] vectorToArray2(ArrayList<Integer> v) {  
+    Integer[] newText = (Integer[])v.toArray(new Integer[0]);  
+    return newText;  
+}
+```
 
 
 ## [我的主页](https://suveng.github.io/blog/)
