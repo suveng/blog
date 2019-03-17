@@ -1,4 +1,4 @@
-title:  (2)CopyOnWriteArrayList原理及使用
+title:  (2)CopyOnWriteArrayList
 date: 2019-03-17 13:00:00 +0800
 update: 2019-03-17 13:00:00 +0800
 author: me
