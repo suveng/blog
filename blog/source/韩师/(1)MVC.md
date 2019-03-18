@@ -26,6 +26,12 @@ JavaEE中的spring框架具体体现为：
 
 浏览器 -> Controller层（controller）-> Service层 -> DAO层(model) -> jsp视图(view) -> 浏览器
 
+![springMVC流程](https://ws1.sinaimg.cn/large/006jIRTegy1g16zynnl5yj30oe0ekgnv.jpg)
+
+springMVC源码调用过程：
+
+![源码调用过程](https://ws1.sinaimg.cn/large/006jIRTegy1g1701m9zzqj30ij0d9q3k.jpg)
+
 技术更新迭代，设计思想几乎没变，但是其中的技术更新迭代很快。尤其是model以及view层。
 
 1. model一般是MySQL数据库，其中还包括一些其他用于存储数据的model，比如MongoDB，Redis，elasticsearch，solr，HDFS，kafka等等
