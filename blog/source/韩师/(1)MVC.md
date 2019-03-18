@@ -2,7 +2,7 @@ title:  (1)MVC
 date: 2014-01-01 13:00:00 +0800
 update: 2014-01-01 13:00:00 +0800
 author: me
-cover: 
+cover: http://ww1.sinaimg.cn/large/006jIRTegy1g17bewj3nqj31kw11xk0o.jpg
 preview:  MVC设计思想
 tags:
 
@@ -14,8 +14,10 @@ tags:
 
 [TOC]
 
+![封面图](http://ww1.sinaimg.cn/large/006jIRTegy1g17bewj3nqj31kw11xk0o.jpg)
 
 # (1)MVC设计思想
+
 MVC模式（Model–view–controller）是软件工程中的一种软件架构模式，把软件系统分为三个基本部分：模型（Model）、视图（View）和控制器（Controller）。
 
 1. 控制器（Controller）- 负责转发请求，对请求进行处理。

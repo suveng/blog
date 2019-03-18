@@ -2,7 +2,7 @@ title:  leetcode(7)整数反转
 date: 2015-01-01 13:00:00 +0800
 update: 2015-01-01 13:00:00 +0800
 author: me
-cover: https://ws1.sinaimg.cn/large/006jIRTegy1g0om2zmzygj32s02304qq.jpg
+cover: http://ww1.sinaimg.cn/large/006jIRTegy1g17bgmf6szj31kw11xal6.jpg
 preview:  leetcode题库第7题：给出一个 32 位的有符号整数，你需要将这个整数中每位上的数字进行反转。
 tags:
 
@@ -14,7 +14,7 @@ tags:
 
 [TOC]
 
-![封面图](https://ws1.sinaimg.cn/large/006jIRTegy1g0om2zmzygj32s02304qq.jpg)
+![封面图](http://ww1.sinaimg.cn/large/006jIRTegy1g17bgmf6szj31kw11xal6.jpg)
 
 # leetcode(7)整数反转
 

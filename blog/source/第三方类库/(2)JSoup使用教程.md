@@ -2,7 +2,7 @@ title: (2)JSoup使用教程
 date: 2018-12-24 8:00:00 +0800
 update: 2018-12-24 8:00:00 +0800
 author: me
-cover: https://ws1.sinaimg.cn/large/006jIRTegy1fyhl621hvrj31kw0w0nc6.jpg
+cover: http://ww1.sinaimg.cn/large/006jIRTegy1g17bg1vg39j31kw11x10c.jpg
 preview:  JSoup是一个用于处理HTML的Java库，它提供了类似于使用jquery的方法的API来提取和操作数据
 tags:
 
@@ -12,7 +12,7 @@ tags:
 
 [TOC]
 
-![封面图](https://ws1.sinaimg.cn/large/006jIRTegy1fyhl621hvrj31kw0w0nc6.jpg)
+![封面图](http://ww1.sinaimg.cn/large/006jIRTegy1g17bg1vg39j31kw11x10c.jpg)
 
 # Java爬虫之JSoup使用教程
 
