@@ -18,6 +18,10 @@ tags:
 
 # leetcode(78)subset
 
+![](http://ww1.sinaimg.cn/large/006jIRTegy1g1h6n5p2uzj30d6083aad.jpg)
+
+
+
 ```java
 public class Solution {
     public List<List<Integer>> subsets(int[] nums) {
