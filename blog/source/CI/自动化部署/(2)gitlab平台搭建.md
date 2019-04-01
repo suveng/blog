@@ -1,6 +1,6 @@
 title:  (2)自动化部署平台搭建
-date: 2014-01-01 13:00:00 +0800
-update: 2014-01-01 13:00:00 +0800
+date: 2019-04-01 13:00:00 +0800
+update: 2019-04-01 13:00:00 +0800
 author: me
 cover: http://ww1.sinaimg.cn/large/006jIRTegy1g17bewj3nqj31kw11xk0o.jpg
 preview:  gitlab是一个开源分布式版本控制系统,管理项目源代码/版本控制/代码复用与查找
@@ -53,7 +53,7 @@ gitlab是一个开源分布式版本控制系统
 - 进行代码检查并提交master主分支合并申请
 - 项目领导审查代码并确认合并申请
 
-gitlab安装配置：
+## gitlab安装配置：
 
 - 安装前的配置
 
