@@ -2,7 +2,7 @@ title:  (2)自动化部署平台搭建
 date: 2019-04-01 13:00:00 +0800
 update: 2019-04-01 13:00:00 +0800
 author: me
-cover: http://ww1.sinaimg.cn/large/006jIRTegy1g17bewj3nqj31kw11xk0o.jpg
+cover: http://ww1.sinaimg.cn/large/006jIRTegy1g1qnzzo04dj31kw11xakq.jpg
 preview:  gitlab是一个开源分布式版本控制系统,管理项目源代码/版本控制/代码复用与查找
 tags:
 
@@ -14,7 +14,7 @@ tags:
 
 [TOC]
 
-![封面图]()
+![封面图](http://ww1.sinaimg.cn/large/006jIRTegy1g1qnzzo04dj31kw11xakq.jpg)
 
 # (2)gitlab平台搭建
 

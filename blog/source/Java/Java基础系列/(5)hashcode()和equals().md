@@ -2,7 +2,7 @@ title:  (5)hashcode()和equals()
 date: 2014-01-02 13:00:00 +0800
 update: 2014-01-02 13:00:00 +0800
 author: me
-cover: http://ww1.sinaimg.cn/large/006jIRTegy1g17bewj3nqj31kw11xk0o.jpg
+cover: http://ww1.sinaimg.cn/large/006jIRTegy1g1qo24qjepj31e00xc1aa.jpg
 preview:  你在用HashMap的时候，Key部分，有没有放过自定义对象？而这个时候，候选人说放过，自相矛盾。
 tags:
 
@@ -14,13 +14,13 @@ tags:
 
 [TOC]
 
-![封面图]()
+![封面图](http://ww1.sinaimg.cn/large/006jIRTegy1g1qo24qjepj31e00xc1aa.jpg)
 
 #  (5)hashcode()和equals()
 
  hashCode()和equals()方法的重要性体现在什么地方?
 
-**通过hashCode和equals方法保证元素的唯一性，当重写equals方法时，必须重写hashCode方法，因为如果不重写这两个方法，当hashSet/hashMap的key为对象时就会默认使用Object的方法，一般是不相同的，所以就会导致存储了重复值**
+**通过hashCode和equals方法保证元素的唯一性，当重写equals方法时，必须重写hashCode方法，因为如果不重写这两个方法，当hashMap的key为对象时就会默认使用Object的方法，一般是不相同的，所以就会导致存储了重复值**
 
 下面的例子就是以对象作为key时的一个场景：
 
