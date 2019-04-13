@@ -1,5 +1,5 @@
 title:  (3)Gitlab应用
-date: 2019-01-13 13:00:00 +0800
+date: 2019-04-13 13:00:00 +0800
 update: 2019-04-13 13:00:00 +0800
 author: me
 cover: http://ww1.sinaimg.cn/large/006jIRTegy1g210ip96hlj31kw11zwtm.jpg
