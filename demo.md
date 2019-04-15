@@ -1,6 +1,6 @@
 title:  (1)网络配置
-date: 2014-01-04 13:00:00 +0800
-update: 2014-01-04 13:00:00 +0800
+date: 2014-01-05 13:00:00 +0800
+update: 2014-01-05 13:00:00 +0800
 author: me
 cover: http://ww1.sinaimg.cn/large/006jIRTegy1g17bewj3nqj31kw11xk0o.jpg
 preview:  MVC设计思想
