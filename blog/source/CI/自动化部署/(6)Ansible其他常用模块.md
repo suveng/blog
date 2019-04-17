@@ -79,7 +79,8 @@ shell默认调用bin/bash的命令，可以使用bash的环境变量。
 实现Ansible服务器到目标主机的jinja2模板的传送
 
 ```yaml
-
+- name: write the nginx config file
+  template: src=roles/testbox/templates/nginx.conf.j2 dest=/etc/nginx/nginx.conf
 ```
 
 
