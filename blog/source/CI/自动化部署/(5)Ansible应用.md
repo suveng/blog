@@ -1,6 +1,6 @@
 title:  (6)Ansible其他常用模块
-date: 2019-04-17 13:00:00 +0800
-update: 2019-04-17 13:00:00 +0800
+date: 2019-04-18 13:00:00 +0800
+update: 2019-04-18 13:00:00 +0800
 author: me
 cover: https://ws1.sinaimg.cn/large/006jIRTegy1g24rob1vraj3334223b29.jpg
 preview:   轻量级无客户端,使用playbook作为核心配置架构，统一的脚本格式批量化部署
