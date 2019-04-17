@@ -30,57 +30,57 @@ tags:
 
 ## 安装和配置：
 
-1. 创建测试服务器
+1.创建测试服务器
 
-2. 安装前的配置准备
+2.安装前的配置准备
 
-   1. 添加yum仓库源
+3.添加yum仓库源
 
-      ```shell
-      wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
-      rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
-      ```
+```shell
+wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+```
 
-   2. 保证系统Java版本为8或以上
+4.保证系统Java版本为8或以上
 
-   3. 关闭防火墙
+5.关闭防火墙
 
-   4. 关闭selinux
+6.关闭selinux
 
-3. jenkins安装
+7.jenkins安装
 
-   1. yum安装Jenkins最新版本
+7.1yum安装Jenkins最新版本
 
-      ```
-      yum install jenkins
-      ```
+```
+yum install jenkins
+```
 
-   2. 创建jenkins系统用户
+7.2创建jenkins系统用户
 
-      ```shell
-      useradd deploy
-      ```
+```shell
+useradd deploy
+```
 
-   3. 更改jenkins启动用户和Duang口
+7.3更改jenkins启动用户和Duang口
 
-      ```
-      vi /etc/sysconfig/jenkins
-      ....
-      JENKINS_USER="root"
-      JENKINS_PORT=8080
-      ....
-      
-      chown -R deploy:deploy /var/lib/jenkins/
-      chown -R deploy:deploy /var/log/jenkins/
-      ```
+```
+vi /etc/sysconfig/jenkins
+....
+JENKINS_USER="root"
+JENKINS_PORT=8080
+....
 
-   4. 启动Jenkins
+chown -R deploy:deploy /var/lib/jenkins/
+chown -R deploy:deploy /var/log/jenkins/
+```
 
-      ```shell
-      systemctl start jenkins
-      ```
+7.4启动Jenkins
 
-   5. 初始化密码，访问8080端口
+```shell
+systemctl start jenkins
+```
+
+7.5初始化密码，访问8080端口
 
 
 
