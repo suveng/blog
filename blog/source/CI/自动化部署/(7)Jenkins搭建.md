@@ -2,7 +2,7 @@ title:  (7)Jenkins搭建
 date: 2019-04-20 13:00:00 +0800
 update: 2019-04-20 13:00:00 +0800
 author: me
-cover: https://ws1.sinaimg.cn/large/006jIRTegy1g24rob1vraj3334223b29.jpg
+cover: https://ws1.sinaimg.cn/large/006jIRTegy1g25y1edcfnj31p411v7ks.jpg
 preview:   Jenkins是一个开源持续集成工具，是由Java开发，提供了软件开发的持续集成服务
 tags:
 
@@ -14,7 +14,7 @@ tags:
 
 [TOC]
 
-![封面图]()
+![封面图](https://ws1.sinaimg.cn/large/006jIRTegy1g25y1edcfnj31p411v7ks.jpg)
 
 # (7)Jenkins搭建
 
