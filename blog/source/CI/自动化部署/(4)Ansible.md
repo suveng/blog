@@ -116,7 +116,6 @@ tags:
 9. 重启
 
    ```shell
-   virtualenv -p /usr/local/bin/python3.6 .py3-a2.5-env
    source /home/deploy/.py3-a2.5-env/bin/activate
    source /home/deploy/.py3-a2.5-env/ansible/hacking/env-setup -q
    ```
