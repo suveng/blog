@@ -171,7 +171,7 @@ gitlab是一个开源分布式版本控制系统
     在本机的hosts文件 添加ip 解析gitlab.example.com
     ```
 
-  - 访问https://gitlab.example.com即可
+  - 访问https://gitlab.example.com即可 密码gitlab.example.com
 
 
 
