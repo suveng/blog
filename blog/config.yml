@@ -13,7 +13,7 @@ site:
 authors:
     me:
         name: suveng
-        intro: Java服务端开发者，golang爱好者
+        intro: Java服务端开发者
         avatar: -/images/avatar.jpg
 build:
     # output: "public"
@@ -21,6 +21,7 @@ build:
     # Copied files to public folder when build
     copy:
         - "source/images"
+        - "source/files"
     # Excuted command when use 'ink publish'
     publish: |
         git add . -A
