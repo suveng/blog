@@ -14,3 +14,4 @@ author: me
 
 [小鸭云](https://xiaoyayun.com) | [不死鸟](https://lai.yuweining.cn/) | [纯洁的微笑](http://www.ityouknow.com/) | [数据结构和算法动态可视化](https://visualgo.net/zh) | [小刀娱乐网](https://www.xd0.com/)
 
+http://suveng.gitee.io/blog
