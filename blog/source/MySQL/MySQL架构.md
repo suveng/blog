@@ -9,9 +9,6 @@ tags:
 
 ---
 
-`<input id="articleAuthor" type="hidden" value="suveng" />`
-`<input id="articleSource" type="hidden" value="https://www.cnblogs.com/suveng/" />`
-
 # MySQL架构
 
 ## 1. 逻辑架构
@@ -20,7 +17,7 @@ tags:
 
 > 源文件存放:  画图工具: draw.io , draw.io可以直接导入文件二次编辑
 
-![逻辑架构图](-/images/2019-8-10/MySQL逻辑架构图.png)
+![逻辑架构图](https://oscimg.oschina.net/oscnet/5ba18429e607aef4dff10d2613af85d8d5c.jpg)
 
 ### 1.2 架构分层
 
