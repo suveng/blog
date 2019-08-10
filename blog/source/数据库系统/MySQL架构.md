@@ -5,7 +5,7 @@ author: me
 cover: images/wallhaven-714079.jpg
 tags:
 
-  -  MySQL
+  -  数据库系统
 
 ---
 
