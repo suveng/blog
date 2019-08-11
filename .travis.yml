@@ -21,6 +21,8 @@ script:
 branch:
   only:
     -source
+notifications:
+   webhooks: https://oapi.dingtalk.com/robot/send?access_token=aa9bfcb2f8c5f3a30e2d5e0235b45920eef3aa893be546f51be8f8b0d602c467
 env:
   global:
     - GH_REF: github.com/suveng/blog
