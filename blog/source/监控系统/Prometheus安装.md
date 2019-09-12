@@ -1,4 +1,4 @@
-title: Prometheus 入门与实践
+title: Prometheus安装
 date: 2019-09-07 11:00:00 +0800
 update: 2019-09-07 11:00:00 +0800
 author: me
@@ -17,7 +17,11 @@ tags:
 
 安装环境: [Linux centos7 minimal](centos.org/download/) 虚拟机; 宿主主机 MacOS; 软件: virtualBox 6.0.10 r132072
 
-选用版本: [prometheus-2.12.0.linux-amd64.tar.gz](https://github.com/prometheus/prometheus/releases/download/v2.12.0/prometheus-2.12.0.linux-amd64.tar.gz)
+选用版本: 
+- [prometheus-2.12.0.linux-amd64.tar.gz](https://github.com/prometheus/prometheus/releases/download/v2.12.0/prometheus-2.12.0.linux-amd64.tar.gz)
+- [grafana-6.3.5-1.x86_64](https://dl.grafana.com/oss/release/grafana-6.3.5-1.x86_64.rpm)
+- [node_exporter-0.18.1.linux-amd64](https://github.com/prometheus/node_exporter/releases)
+- [pushgateway-0.9.1.linux-amd64](https://github.com/prometheus/pushgateway/releases/download/v0.9.1/pushgateway-0.9.1.linux-amd64.tar.gz)
 
 
 
@@ -35,6 +39,8 @@ tags:
 
   - [【CentOS7】yum安装时出现错误[Errno 14] curl#6 - "Could not resolve host: mirrors.aliyuncs.com; Unknown e的解决办法](https://blog.csdn.net/oschina_41140683/article/details/82426831)
 
+  - [必装类库](https://www.icode9.com/content-3-361221.html)
+  
     
 
 ### 2.配置 以及 安装依赖
