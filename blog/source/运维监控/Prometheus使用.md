@@ -334,8 +334,10 @@ scrape_configs:
   - 响应结果 必须符合prometheus的metrics的格式
 
 - [Java]Spring版exporter
+  
   - [自定义Metrics：让Prometheus监控你的应用程序（Spring版）](http://ylzheng.com/2018/01/24/use-prometheus-monitor-your-spring-boot-application/)
-- - Go语言开发Prometheus Exporter[示例](https://blog.csdn.net/lisonglisonglisong/article/details/81743555)
+  
+  - Go语言开发Prometheus Exporter[示例](https://blog.csdn.net/lisonglisonglisong/article/details/81743555)
 
 
 
