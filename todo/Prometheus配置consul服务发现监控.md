@@ -10,3 +10,4 @@
 - [pushgateway-0.9.1.linux-amd64](https://github.com/prometheus/pushgateway/releases/download/v0.9.1/pushgateway-0.9.1.linux-amd64.tar.gz)
 - JDK1.8
 - springcloud Finchley.RELEASE
+
